@@ -1,41 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Responsivo">
-	<meta name="author" content="">
-
-	<title>K.O - Sua Referência em Games</title>
-
-	<!-- CSS -->
-	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
-	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
-	<link href="assets/css/animate.css" rel="stylesheet">
-    
-	<!-- Custom styles CSS -->
-	<link href="assets/css/style.css" rel="stylesheet" media="screen">
-    
-    <script src="assets/js/modernizr.custom.js"></script>
-       
-</head>
-<body>
-
-	<!-- Preloader -->
-
-	<div id="preloader">
-		<div id="status"></div>
-	</div>
+<!-- Include file header -->
+<%@include file="../assets/includes/header.html" %>
 
 	<!-- Home start -->
 
 	<section id="home" class="pfblock-image screen-height">
         <div class="home-overlay"></div>
 		<div class="intro">
-			<div class="start">Tem dúvidas sobre game?</div>
-			<h1>Tudo sobre Game você encontra aqui!</h1>
-			<div class="start">K.O. - Sua melhor referência em games.</div>
+			<div class="start">Tem d�vidas sobre games?</div>
+			<h1>Tudo sobre Games voc� encontra aqui!</h1>
+			<div class="start">K.O. - Sua melhor refer�ncia em games.</div>
 		</div>
 
         <a href="#services">
@@ -50,40 +23,8 @@
 
 	<!-- Home end -->
 
-	<!-- Navigation start -->
-
-	<header class="header">
-
-		<nav class="navbar navbar-custom" role="navigation">
-
-			<div class="container">
-
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">John Doe</a>
-				</div>
-
-				<div class="collapse navbar-collapse" id="custom-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#home">Home</a></li>
-                        <li><a href="#skills">Notícias</a></li>
-						<li><a href="#testimonials">Sobre Nós</a></li>
-						<li><a href="/ko/contato.html">Contato</a></li>
-					</ul>
-				</div>
-
-			</div><!-- .container -->
-
-		</nav>
-
-	</header>
-
-	<!-- Navigation end -->
+	<!-- 	Include Navbar -->
+	<%@include file="../assets/includes/page-header.html" %>
 
     <!-- Services start -->
 
@@ -423,60 +364,6 @@
 	</section>
 
 	<!-- Testimonial end -->
-
-
-	<!-- Contact start -->
-
-	<section id="contact" class="pfblock">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-sm-6 col-sm-offset-3">
-
-					<div class="pfblock-header">
-						<h2 class="pfblock-title">Drop me a line</h2>
-						<div class="pfblock-line"></div>
-						<div class="pfblock-subtitle">
-							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
-						</div>
-					</div>
-
-				</div>
-
-			</div><!-- .row -->
-
-			<div class="row">
-
-				<div class="col-sm-6 col-sm-offset-3">
-
-					<form id="contact-form" role="form">
-						<div class="ajax-hidden">
-							<div class="form-group wow fadeInUp">
-								<label class="sr-only" for="c_name">Name</label>
-								<input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
-							</div>
-
-							<div class="form-group wow fadeInUp" data-wow-delay=".1s">
-								<label class="sr-only" for="c_email">Email</label>
-								<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
-							</div>
-
-							<div class="form-group wow fadeInUp" data-wow-delay=".2s">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
-							</div>
-
-							<button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
-						</div>
-						<div class="ajax-response"></div>
-					</form>
-
-				</div>
-
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section>
-
-	<!-- Contact end -->
 
 	<!-- Footer start -->
 
