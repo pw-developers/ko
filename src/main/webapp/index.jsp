@@ -35,10 +35,10 @@
 				<div class="col-sm-6 col-sm-offset-3">
 
 					<div class="pfblock-header wow fadeInUp">
-						<h2 class="pfblock-title">This is what I do</h2>
+						<h2 class="pfblock-title">É isso o que nós fazemos</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open peopleâ€™s eyes, to reveal the marvels around.
+							Trazemos até você as últimas notícias, gameplays, análises, detonados e muito mais deste maravilhoso mundo dos jogos que nos encanta e nos faz perder horas úteis para desenvolvermos os melhores sistemas WEB.
 						</div>
 					</div>
 
@@ -55,9 +55,9 @@
 							<span class="icon-magic-wand"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Web Design</h3>
+							<h3 class="iconbox-title">Notícias</h3>
 							<div class="iconbox-desc">
-								Good things come to those who wait, but only the things left by those who hustle
+								Todas novidades do mundo dos jogos para que você não perca nenhuma informação.
 							</div>
 						</div>
 					</div>
@@ -71,9 +71,9 @@
 							<span class="icon-puzzle"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Web Programming</h3>
+							<h3 class="iconbox-title">Gameplays</h3>
 							<div class="iconbox-desc">
-								Good things come to those who wait, but only the things left by those who hustle
+								Gameplays comentados e animados para você acompanhar seus jogos favoritos.
 							</div>
 						</div>
 					</div>
@@ -87,9 +87,9 @@
 							<span class="icon-badge"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Branding</h3>
+							<h3 class="iconbox-title">Análises</h3>
 							<div class="iconbox-desc">
-								Good things come to those who wait, but only the things left by those who hustle
+								Realizamos a análise de jogos e consoles, para que você faça a escolha correta.
 							</div>
 						</div>
 					</div>
@@ -103,9 +103,9 @@
 							<span class="icon-question"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Consultation</h3>
+							<h3 class="iconbox-title">Detonados</h3>
 							<div class="iconbox-desc">
-								Good things come to those who wait, but only the things left by those who hustle
+								Detalhamos passo-a-passo os segredos daqueles jogos que você está sofrendo para finalizar.
 							</div>
 						</div>
 					</div>
@@ -127,10 +127,10 @@
 				<div class="col-sm-6 col-sm-offset-3">
 
 					<div class="pfblock-header wow fadeInUp">
-						<h2 class="pfblock-title">My works</h2>
+						<h2 class="pfblock-title">Notícias</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open peopleâ€™s eyes, to reveal the marvels around.
+							As novidades do mundo dos jogos você encontra aqui.
 						</div>
 					</div>
 
@@ -145,84 +145,84 @@
                     
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/item-1.jpg" alt="img01"/>
+                            <img src="assets/images/idosos-mortal-kombat-X-1.jpg" alt="img01"/>
                             <figcaption>
-                                <h2>Crazy <span>Shark</span></h2>
-                                <p>Lily likes to play with crayons and pencils</p>
+                                <h2>Idosos e <span>Mortal Kombat X</span></h2>
+                                <p>Idosos jogaram Mortal Kombat X e se impressionam com a violência</p>
                             </figcaption>			
                         </figure>
                     </div>
-                    
+                    <!-- http://www.baixakijogos.com.br/noticias/idosos-jogam-mortal-kombat-x-impressionam-violencia-video_809363.htm -->
                 </div>
 
                 <div class="col-xs-12 col-sm-4 col-md-4">
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/item-2.jpg" alt="img01"/>
+                            <img src="assets/images/kojima-vs-konami-1.jpg" alt="img01"/>
                             <figcaption>
-                                <h2>Funny <span>Tortoise</span></h2>
-                                <p>Lily likes to play with crayons and pencils</p>
+                                <h2>Kojima <span>VS</span> Konami</h2>
+                                <p>Konami poderá deixar de fazer jogos para consoles</p>
                             </figcaption>			
                         </figure>
                     </div>
-                    
+                    <!-- http://iegames.com.br/konami-podera-deixar-de-fazer-jogos-para-consoles-para-apostar-no-mercado-mobile/ -->
                 </div>
                 
                 <div class="col-xs-12 col-sm-4 col-md-4">
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/item-3.jpg" alt="img01"/>
+                            <img src="assets/images/the-witcher-3-sex-1.jpg" alt="img01"/>
                             <figcaption>
-                                <h2>The <span>Hat</span></h2>
-                                <p>Lily likes to play with crayons and pencils</p>
+                                <h2>16 horas de <span>sexo</span><br> The Witcher 3</h2>
+                                <p>Foram capturadas 16 horas de sexo para The Witcher 3</p>
                             </figcaption>			
                         </figure>
                     </div>
-                    
+                    <!-- http://adrenaline.uol.com.br/2015/02/01/32093/16-horas-de-sexo-foram-capturadas-para-the-witcher-3 -->
                 </div>
                 
                 <div class="col-xs-12 col-sm-4 col-md-4">
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/item-4.jpg" alt="img01"/>
+                            <img src="assets/images/Destiny-1.jpg" alt="img01"/>
                             <figcaption>
-                                <h2>Bang <span>Bang</span></h2>
-                                <p>Lily likes to play with crayons and pencils</p>
+                                <h2>Destiny e uma nova <span>Expansão?</span></h2>
+                                <p>Produtora de "Destiny" registra marca "The Taken King"</p>
                             </figcaption>			
                         </figure>
                     </div>
-                    
+                    <!-- http://jogos.uol.com.br/ultimas-noticias/2015/05/06/produtora-de-destiny-registra-marca-the-taken-king.htm -->
                 </div>
                 
                 <div class="col-xs-12 col-sm-4 col-md-4">
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/item-5.jpg" alt="img01"/>
+                            <img src="assets/images/dota-2-1.jpg" alt="img01"/>
                             <figcaption>
-                                <h2>Crypton <span>Dude</span></h2>
-                                <p>Lily likes to play with crayons and pencils</p>
+                                <h2>Dota 2 <span>International</span></h2>
+                                <p>Prémio do Internetional atinge $5 milhões de dólares em apenas dois dias</p>
                             </figcaption>			
                         </figure>
                     </div>
-                    
+                    <!-- http://www.pcgamesn.com/dota-2/the-dota-2-international-2015-prize-pool-hits-5-million-dollars-in-just-over-two-days -->
                 </div>
                 
                 <div class="col-xs-12 col-sm-4 col-md-4">
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/item-6.jpg" alt="img01"/>
+                            <img src="assets/images/league-of-legends-1.jpg" alt="img01"/>
                             <figcaption>
-                                <h2>Don't <span>Poke</span></h2>
-                                <p>Lily likes to play with crayons and pencils</p>
+                                <h2>Campeonato de <span>League of Legends</span></h2>
+                                <p>CBLoL dá boas-vindas aos novos times</p>
                             </figcaption>			
                         </figure>
                     </div>
-                    
+                    <!-- http://br.leagueoflegends.com/pt/news/esports/esports-editorial/cblol-da-boas-vindas-aos-novos-times -->
                 </div>
                 
             </div>
