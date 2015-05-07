@@ -20,12 +20,12 @@ img {
 }
 
 a {
-	color: #E7746F;
+	color: #111;
 }
 
 a:hover {
 	text-decoration: none;
-	color: #999;
+	color: #dc5c5c;
 }
 
 /* ---------------------------------------------- /*
@@ -198,10 +198,11 @@ textarea.form-control {
 	font-size: 13px;
     background: rgba(17, 17, 17, 0.8);
     color: #fff;
+    font-weight: 600;
 }
 .btn-lg:hover,
 .btn-group-lg > .btn:hover{
-    background: rgba(17, 17, 17, 1.8);
+    background: #c60000;
     color: #fff;
 }
 
@@ -331,7 +332,8 @@ textarea.form-control {
 	margin-bottom: 5px;
 }
 .calltoaction-btn > .btn:hover{
-    background: #fff;
+    background: #c60000;
+    color: #fff;
 }
 
 .long-down {
@@ -339,9 +341,41 @@ textarea.form-control {
 }
 
 /* ---------------------------------------------- /*
- * Home
+ * Title Page
 /* ---------------------------------------------- */
 
+.title-page {
+	/* 	background: rgba(0,0,0,0.5);	 */
+	background: #828282; /* Old browsers */
+	background: -moz-linear-gradient(top, #828282 0%, #969696 43%, #969696 58%, #828282
+		100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #828282),
+		color-stop(43%, #969696), color-stop(58%, #969696),
+		color-stop(100%, #828282)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #828282 0%, #969696 43%, #969696 58%,
+		#828282 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #828282 0%, #969696 43%, #969696 58%, #828282
+		100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #828282 0%, #969696 43%, #969696 58%, #828282
+		100%); /* IE10+ */
+	background: linear-gradient(to bottom, #828282 0%, #969696 43%, #969696 58%, #828282
+		100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#828282',
+		endColorstr='#828282', GradientType=0); /* IE6-9 */
+}
+
+.title-page p {
+	margin: 10px 0 10px;
+	font-family: Raleway, "Times New Roman", Times, sans-serif;
+	color: #fff;
+	font-weight: 500;
+	font-size: 25px;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+/* ---------------------------------------------- /*
+ * Home
+/* ---------------------------------------------- */
 #home {
 	background: url(../images/cover.jpg);
 	background-color: #222;
@@ -508,9 +542,24 @@ textarea.form-control {
 	color: rgba(255, 255, 255, .2);
 }
 
-.social-links a:hover {
-	border: 1px solid rgba(255, 255, 255, .5);
-	color: rgba(255, 255, 255, .8);
+.social-links a.icon-facebook:hover {
+	border: 1px solid rgba(59, 89, 152, .9);
+	color: rgba(59, 89, 152, .8);
+}
+
+.social-links a.icon-twitter:hover {
+	border: 1px solid rgba(94, 169, 221, .9);
+	color: rgba(94, 169, 221, .8);
+}
+
+.social-links a.icon-google-plus:hover {
+	border: 1px solid rgba(212, 60, 47, .9);
+	color: rgba(212, 60, 47, .8);
+}
+
+.social-links a.icon-envelope-email:hover {
+	border: 1px solid rgba(237, 208, 76, .9);
+	color: rgba(237, 208, 76, .8);
 }
 
 /* ---------------------------------------------- /*
@@ -529,7 +578,9 @@ textarea.form-control {
 	border-radius: 0;
 	margin: 0;
 	text-transform: uppercase;
-	font-family: Raleway, sans-serif;
+/* 	font-family: Raleway, sans-serif; */
+	font-family: Raleway, "Times New Roman", Times, sans-serif;
+	font-weight: 500;
 }
 
 .navbar-custom,
@@ -552,7 +603,7 @@ textarea.form-control {
 .navbar-custom .navbar-nav > li.active a {
 	background: none;
 	outline: 0;
-	color: #E7746F;
+	color: #fff;
 }
 
 .navbar-custom .navbar-brand {
@@ -1108,19 +1159,74 @@ figure.effect-bubba:hover p {
 
 @media (max-width:767px) {
     #wrapper {
-    padding-left: 70px;
-    transition: all .4s ease 0s;
-}
-#sidebar-wrapper {
-    left: 70px;
-}
-#wrapper.active {
-    padding-left: 150px;
-}
-#wrapper.active #sidebar-wrapper {
-    left: 150px;
-    width: 150px;
-    transition: all .4s ease 0s;
-}
+	    padding-left: 70px;
+	    transition: all .4s ease 0s;
+	}
+	#sidebar-wrapper {
+	    left: 70px;
+	}
+	#wrapper.active {
+	    padding-left: 150px;
+	}
+	#wrapper.active #sidebar-wrapper {
+	    left: 150px;
+	    width: 150px;
+	    transition: all .4s ease 0s;
+	}
 }
 
+/*-----------------------*/
+/******* About Us ********/
+/*-----------------------*/
+#about-us.pfblock {
+	padding: 0px 0px 100px;
+}
+
+#about-us h3 {
+	margin: 5px 0 5px;
+}
+
+.email-contact {
+	font-style: italic;
+	color: #1f85d4;
+}
+
+#about-us .iconbox {
+	border-bottom: none;
+	padding: 20px 20px;
+}
+
+.text-about-us {
+	text-indent: 25px;
+}
+
+/*-----------------------*/
+/******** Admin **********/
+/*-----------------------*/
+#admin.pfblock{
+	padding: 30px 0 100px;
+}
+.login-img p {
+	text-align: center;
+}
+
+.back-to-home {
+	margin: 0 40px;
+}
+
+.back-to-home a {
+	padding: 11px 25px;
+	color: #fff;
+}
+
+span.glyphicon-circle-arrow-left {
+	padding-right: 10px;
+}
+
+/*-----------------------*/
+/******** Admin **********/
+/*-----------------------*/
+
+#noticias.pfblock {
+	padding: 0px 0 100px;
+}
