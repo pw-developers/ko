@@ -24,7 +24,7 @@
 	<!-- Home end -->
 
 	<!-- 	Include Navbar -->
-	<%@include file="../assets/includes/page-header.html" %>
+	<%@include file="../assets/includes/menu-header.html" %>
 
     <!-- Services start -->
 
@@ -145,7 +145,7 @@
                     
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/idosos-mortal-kombat-X-1.jpg" alt="img01"/>
+                            <img src="assets/images/idosos-mortal-kombat-X-1.jpg" alt="idosos-mortal-kombat"/>
                             <figcaption>
                                 <h2>Idosos e <span>Mortal Kombat X</span></h2>
                                 <p>Idosos jogaram Mortal Kombat X e se impressionam com a violência</p>
@@ -159,7 +159,7 @@
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/kojima-vs-konami-1.jpg" alt="img01"/>
+                            <img src="assets/images/kojima-vs-konami-1.jpg" alt="kojima-versus-konami"/>
                             <figcaption>
                                 <h2>Kojima <span>VS</span> Konami</h2>
                                 <p>Konami poderá deixar de fazer jogos para consoles</p>
@@ -173,7 +173,7 @@
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/the-witcher-3-sex-1.jpg" alt="img01"/>
+                            <img src="assets/images/the-witcher-3-sex-1.jpg" alt="the-witcher-3-sex"/>
                             <figcaption>
                                 <h2>16 horas de <span>sexo</span><br> The Witcher 3</h2>
                                 <p>Foram capturadas 16 horas de sexo para The Witcher 3</p>
@@ -187,7 +187,7 @@
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/Destiny-1.jpg" alt="img01"/>
+                            <img src="assets/images/destiny-1.jpg" alt="destiny"/>
                             <figcaption>
                                 <h2>Destiny e uma nova <span>Expansão?</span></h2>
                                 <p>Produtora de "Destiny" registra marca "The Taken King"</p>
@@ -201,7 +201,7 @@
             
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
-                            <img src="assets/images/dota-2-1.jpg" alt="img01"/>
+                            <img src="assets/images/dota-2.jpg" alt="dota2"/>
                             <figcaption>
                                 <h2>Dota 2 <span>International</span></h2>
                                 <p>Prémio do Internetional atinge $5 milhões de dólares em apenas dois dias</p>
@@ -236,21 +236,21 @@
     
     <!-- Skills start -->
     
-    <section class="pfblock pfblock-gray" id="skills">
+    <section class="pfblock pfblock-gray" id="more-views">
 		
 			<div class="container">
 			
-				<div class="row skills">
+				<div class="row more-views">
 					
 					<div class="row">
 
                         <div class="col-sm-6 col-sm-offset-3">
 
                             <div class="pfblock-header wow fadeInUp">
-                                <h2 class="pfblock-title">My Skills</h2>
+                                <h2 class="pfblock-title">Mais Vistos</h2>
                                 <div class="pfblock-line"></div>
                                 <div class="pfblock-subtitle">
-                                    No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open peopleâ€™s eyes, to reveal the marvels around.
+                                    Os contadores mostram as categorias de games mais procurados.
                                 </div>
                             </div>
 
@@ -262,7 +262,7 @@
 						<span data-percent="80" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">80</span>
                         </span>
-						<h3 class="text-center">Programming</h3>
+						<h3 class="text-center">RPG</h3>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
 						<span data-percent="90" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
@@ -365,44 +365,8 @@
 
 	<!-- Testimonial end -->
 
-	<!-- Footer start -->
 
-	<footer id="footer">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-sm-12">
-
-					<ul class="social-links">
-						<li><a href="index.html#" class="wow fadeInUp"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".1s"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".2s"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-pinterest"></i></a></li>
-						<li><a href="index.html#" class="wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-
-					<p class="heart">
-                        Made with <span class="fa fa-heart fa-2x animated pulse"></span> in Nottingham
-                    </p>
-                    <p class="copyright">
-                        Â© 2015 John Doe | Images: <a href="https://unsplash.com/">Unsplash</a> & <a href="http://zoomwalls.com/">Zoomwalls</a>
-					</p>
-
-				</div>
-
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</footer>
-
-	<!-- Footer end -->
-
-	<!-- Scroll to top -->
-
-	<div class="scroll-up">
-		<a href="#home"><i class="fa fa-angle-up"></i></a>
-	</div>
-    
-    <!-- Scroll to top end-->
+<%@include file="../assets/includes/footer.html"%>
 
 	<!-- Javascript files -->
 

@@ -1,5 +1,5 @@
 <%@include file="../assets/includes/header.html"%>
-<%@include file="../assets/includes/page-header.html"%>
+<%@include file="../assets/includes/menu-header.html"%>
 <!-- Contact start -->
 
 <section id="contact" class="pfblock pfblock-gray">
@@ -89,8 +89,12 @@
 	<!-- .container -->
 </section>
 
-<!-- Contact end -->
+	<!-- Contact end -->
+
+	<!-- Get Footer -->
 <%@include file="../assets/includes/footer.html"%>
+
+	<!-- Scripts -->
 <script src="assets/js/jquery-1.11.1.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/imagesloaded.pkgd.js"></script>

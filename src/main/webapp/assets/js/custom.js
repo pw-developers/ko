@@ -51,7 +51,7 @@
         /* ---------------------------------------------- */    
         //var color = $('#home').css('backgroundColor');
 
-        $('.skills').waypoint(function(){
+        $('.more-views').waypoint(function(){
             $('.chart').each(function(){
             $(this).easyPieChart({
                     size:140,
@@ -153,7 +153,15 @@
             
             	return false;
 			});
-
+	});
+	
+	/* ---------------------------------------------- /*
+	 * Sidebar Toggle Menu
+	/* ---------------------------------------------- */
+	
+	$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
 	});
 
 })(jQuery);
