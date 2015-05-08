@@ -21,9 +21,9 @@
 					<div class="container">
 						<div class="well wow fadeInUp animated">
 							<div class="media">
-								<a class="pull-left" href="#"> <img class="media-object"
+								<img class="media-object pull-left"
 									src="assets/images/idosos-mortal-kombat-X-1.jpg">
-								</a>
+
 								<div class="media-body">
 									<h4 class="media-heading">IDOSOS E MORTAL KOMBAT X</h4>
 									<p class="text-right">
@@ -35,7 +35,7 @@
 										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
 										quis tortor imperdiet venenatis. Duis elementum auctor
 										accumsan. Aliquam in felis sit amet augue.</p>
-									<ul class="list-inline list-unstyled">
+									<ul class="list-inline list-unstyled pull-left">
 										<li><span class="date-hour"><i
 												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
 										<li>|</li>
@@ -55,6 +55,10 @@
 												class="fa fa-google-plus-square"></i></span>
 										</li>
 									</ul>
+									<div class="pull-right">
+										<a class="btn btn-lg read-more"
+											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -62,9 +66,9 @@
 
 						<div class="well wow fadeInUp animated">
 							<div class="media">
-								<a class="pull-left" href="#"> <img class="media-object"
+								<img class="media-object pull-left"
 									src="assets/images/kojima-vs-konami-1.jpg">
-								</a>
+
 								<div class="media-body">
 									<h4 class="media-heading">KOJIMA VS KONAMI</h4>
 									<p class="text-right">
@@ -76,7 +80,7 @@
 										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
 										quis tortor imperdiet venenatis. Duis elementum auctor
 										accumsan. Aliquam in felis sit amet augue.</p>
-									<ul class="list-inline list-unstyled">
+									<ul class="list-inline list-unstyled pull-left">
 										<li><span class="date-hour"><i
 												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
 										<li>|</li>
@@ -96,6 +100,10 @@
 												class="fa fa-google-plus-square"></i></span>
 										</li>
 									</ul>
+									<div class="pull-right">
+										<a class="btn btn-lg read-more"
+											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -103,9 +111,8 @@
 
 						<div class="well wow fadeInUp animated">
 							<div class="media">
-								<a class="pull-left" href="#"> <img class="media-object"
+								<img class="media-object pull-left"
 									src="assets/images/the-witcher-3-sex-1.jpg">
-								</a>
 								<div class="media-body">
 									<h4 class="media-heading">16 HORAS DE SEXO THE WITCHER 3</h4>
 									<p class="text-right">
@@ -117,7 +124,7 @@
 										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
 										quis tortor imperdiet venenatis. Duis elementum auctor
 										accumsan. Aliquam in felis sit amet augue.</p>
-									<ul class="list-inline list-unstyled">
+									<ul class="list-inline list-unstyled pull-left">
 										<li><span class="date-hour"><i
 												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
 										<li>|</li>
@@ -137,6 +144,10 @@
 												class="fa fa-google-plus-square"></i></span>
 										</li>
 									</ul>
+									<div class="pull-right">
+										<a class="btn btn-lg read-more"
+											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -144,9 +155,7 @@
 
 						<div class="well wow fadeInUp animated">
 							<div class="media wow slideInRight animated">
-								<a class="pull-left" href="#"> <img class="media-object"
-									src="assets/images/destiny-1.jpg">
-								</a>
+								<img class="media-object pull-left" src="assets/images/destiny-1.jpg">
 								<div class="media-body">
 									<h4 class="media-heading">DESTINY E UMA NOVA EXPANSÃO?</h4>
 									<p class="text-right">
@@ -158,7 +167,7 @@
 										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
 										quis tortor imperdiet venenatis. Duis elementum auctor
 										accumsan. Aliquam in felis sit amet augue.</p>
-									<ul class="list-inline list-unstyled">
+									<ul class="list-inline list-unstyled pull-left">
 										<li><span class="date-hour"><i
 												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
 										<li>|</li>
@@ -178,6 +187,10 @@
 												class="fa fa-google-plus-square"></i></span>
 										</li>
 									</ul>
+									<div class="pull-right">
+										<a class="btn btn-lg read-more"
+											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+									</div>
 								</div>
 							</div>
 						</div>

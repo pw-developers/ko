@@ -43,8 +43,8 @@
 			</div>
 			<div class="col-sm-6">
 
-				<div class="pfblock-header">
-					<h2 class="pfblock-title">Entre em contato</h2>
+				<div class="pfblock-header title-contact">
+					<h2 class="pfblock-title ">Entre em contato</h2>
 					<div class="pfblock-line"></div>
 					<!-- 					<div class="pfblock-subtitle">No one lights a lamp in order -->
 					<!-- 						to hide it behind the door: the purpose of light is to create more -->
@@ -79,14 +79,14 @@
 								rows="7" placeholder="Menssagem"></textarea>
 						</div>
 
-						<button name="enviaMsg" value="enviando" type="submit" class="btn btn-lg btn-block wow fadeInUp"
+						<button name="enviaMsg" value="enviando" type="submit" class="btn btn-lg btn-block wow fadeInUp animated"
 							data-wow-delay=".3s">Enviar</button>
 					</div>
 					<div class="ajax-response"></div>
 				</form>
 
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6 information-contact center-block">
 				<hr class="featurette-divider hidden-lg">
 				<div class="col-lg-6 col-md-push-1">
 					<address>

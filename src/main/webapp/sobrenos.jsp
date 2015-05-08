@@ -1,5 +1,6 @@
 <%@include file="../assets/includes/header.html"%>
 <%@include file="../assets/includes/menu-header.html"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <!-- 	AboutUS Start -->
 <section class="title-page">

@@ -236,7 +236,7 @@
     
     <!-- Mais Vistos -->
     
-    <section class="pfblock pfblock-gray" id="more-views">
+    <section class="pfblock pfblock-black" id="more-views">
 		
 			<div class="container">
 			
@@ -247,7 +247,7 @@
                         <div class="col-sm-6 col-sm-offset-3">
 
                             <div class="pfblock-header wow fadeInUp">
-                                <h2 class="pfblock-title">Mais Vistos</h2>
+                                <h2 class="pfblock-title-light">Mais Vistos</h2>
                                 <div class="pfblock-line"></div>
                                 <div class="pfblock-subtitle">
                                     Os contadores mostram as categorias de games mais procurados.
@@ -262,25 +262,25 @@
 						<span data-percent="80" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">80</span>
                         </span>
-						<h3 class="text-center">RPG</h3>
+						<h3 class="text-center text-light">RPG</h3>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
 						<span data-percent="90" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">90</span>
                         </span>
-						<h3 class="text-center">Estratégia</h3>
+						<h3 class="text-center text-light">Estratégia</h3>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
 						<span data-percent="85" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">85</span>
                         </span>
-						<h3 class="text-center">Plataforma</h3>
+						<h3 class="text-center text-light">Plataforma</h3>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
 						<span data-percent="95" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">95</span>
                         </span>
-						<h3 class="text-center">FPS</h3>
+						<h3 class="text-center text-light">FPS</h3>
 					</div>
 					
 				</div><!--End row -->

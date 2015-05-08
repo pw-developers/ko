@@ -29,6 +29,8 @@ public class KoServlet extends HttpServlet {
 				resp.sendRedirect("noticias.jsp");
 			} else if (caminho.equals("sobrenos")) {
 				resp.sendRedirect("sobrenos.jsp");
+			}else if (caminho.equals("single-noticia")) {
+				resp.sendRedirect("single-noticia.jsp");
 			}
 		}
 
