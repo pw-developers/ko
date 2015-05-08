@@ -1,4 +1,5 @@
-;(function($) {
+;
+(function($) {
 
 	/***************************************************************************
 	 * ---------------------------------------------- / Preloader /*
@@ -9,7 +10,11 @@
 		$('#status').fadeOut();
 		$('#preloader').delay(300).fadeOut('slow');
 	});
-
+	
+	$(".dropdown").click(function() {
+		window.location = "/ko/ko?caminho=noticias";
+	});
+	
 	$(".dropdown").hover(function() {
 		$('.dropdown-menu', this).stop(true, true).fadeIn("fast");
 		$(this).toggleClass('open');
@@ -184,9 +189,9 @@
 										});
 					});
 
-	/***************************************************************************
-	 * ---------------------------------------------- / Sidebar Toggle Menu /*
-	 * ----------------------------------------------
+	/**
+	 * * ---------------------------- / Sidebar Toggle Menu /* *
+	 * ----------------------------
 	 */
 
 	$("#menu-toggle").click(function(e) {
