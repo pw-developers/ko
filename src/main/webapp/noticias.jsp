@@ -57,7 +57,7 @@
 									</ul>
 									<div class="pull-right">
 										<a class="btn btn-lg read-more"
-											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+											href="/ko/ko?caminho=single-noticia">Ler Mais</a>
 									</div>
 								</div>
 							</div>
@@ -102,7 +102,7 @@
 									</ul>
 									<div class="pull-right">
 										<a class="btn btn-lg read-more"
-											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+											href="/ko/ko?caminho=single-noticia">Ler Mais</a>
 									</div>
 								</div>
 							</div>
@@ -146,7 +146,7 @@
 									</ul>
 									<div class="pull-right">
 										<a class="btn btn-lg read-more"
-											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+											href="/ko/ko?caminho=single-noticia">Ler Mais</a>
 									</div>
 								</div>
 							</div>
@@ -189,7 +189,7 @@
 									</ul>
 									<div class="pull-right">
 										<a class="btn btn-lg read-more"
-											href="ko/ko?caminho=single-noticia">Ler Mais</a>
+											href="/ko/ko?caminho=single-noticia">Ler Mais</a>
 									</div>
 								</div>
 							</div>
