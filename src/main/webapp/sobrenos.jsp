@@ -5,7 +5,7 @@
 <section class="title-page">
 	<div class="container">
 		<div class="row">
-			<p>Sobre nos</p>
+			<p>Sobre nós</p>
 		</div>
 	</div>
 </section>
@@ -34,7 +34,7 @@
 						<h3>Igor de Bastos</h3>
 						<em>Desenvolvedor Web</em>
 						<p>Contato,</p>
-						<p class="email-contact">mmoiita@gmail.com</p>
+						<p class="email-contact">igorbastosib@hotmail.com</p>
 					</div>
 				</div>
 			</div>

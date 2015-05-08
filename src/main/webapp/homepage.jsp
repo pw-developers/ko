@@ -118,7 +118,7 @@
 
 	<!-- Services end -->
     
-	<!-- Portfolio start -->
+	<!-- Noticias start -->
 
 	<section id="portfolio" class="pfblock">
 		<div class="container">
@@ -232,9 +232,9 @@
 
 	</section>
 
-	<!-- Portfolio end -->
+	<!-- Noticias end -->
     
-    <!-- Skills start -->
+    <!-- Mais Vistos -->
     
     <section class="pfblock pfblock-gray" id="more-views">
 		
@@ -268,19 +268,19 @@
 						<span data-percent="90" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">90</span>
                         </span>
-						<h3 class="text-center">Design</h3>
+						<h3 class="text-center">Estratégia</h3>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
 						<span data-percent="85" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">85</span>
                         </span>
-						<h3 class="text-center">Marketing</h3>
+						<h3 class="text-center">Plataforma</h3>
 					</div>
 					<div class="col-sm-6 col-md-3 text-center">
 						<span data-percent="95" class="chart easyPieChart" style="width: 140px; height: 140px; line-height: 140px;">
                             <span class="percent">95</span>
                         </span>
-						<h3 class="text-center">UI / UX</h3>
+						<h3 class="text-center">FPS</h3>
 					</div>
 					
 				</div><!--End row -->
@@ -289,7 +289,7 @@
 		
     </section>
     
-    <!-- Skills end -->
+    <!-- Mais Vistos end -->
 
 	<!-- CallToAction start -->
 

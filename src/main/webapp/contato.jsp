@@ -15,15 +15,31 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
+			<%String envioMSG;
+			if(request.getAttribute("enviandoMsg") == null){
+				envioMSG = "NULL";
+			}else{
+				envioMSG = (String) request.getAttribute("enviandoMsg");
+			}
+
+			if(!envioMSG.equals("NULL")){
+			%>
 				<small><i></i>Mensagens de alerta - Sucesso e Erro!</i></small>
+				<%
+				if(envioMSG.equals("true")){
+				%>
 				<div class="alert alert-success">
 					<strong><span class="glyphicon glyphicon-send"></span>
 						Mensagem enviada com Sucesso!</strong>
 				</div>
+				<%} else { %>
 				<div class="alert alert-danger">
 					<span class="glyphicon glyphicon-alert"></span><strong>
-						Erro ao enviar a mensagem, tente mais tarde!</strong>
+						Erro ao enviar a mensagem, tente mais tarde!<br>
+						<%out.print((String) request.getAttribute("enviandoMsgErro")); %></strong>
 				</div>
+			<%	}
+			}%>
 			</div>
 			<div class="col-sm-6">
 
@@ -44,7 +60,7 @@
 
 			<div class="col-sm-6">
 
-				<form id="contact-form" role="form">
+				<form id="contact-form" role="form" action="/ko/ko">
 					<div class="ajax-hidden">
 						<div class="form-group wow fadeInUp">
 							<label class="sr-only" for="c_name">Name</label> <input
@@ -63,7 +79,7 @@
 								rows="7" placeholder="Menssagem"></textarea>
 						</div>
 
-						<button type="submit" class="btn btn-lg btn-block wow fadeInUp"
+						<button name="enviaMsg" value="enviando" type="submit" class="btn btn-lg btn-block wow fadeInUp"
 							data-wow-delay=".3s">Enviar</button>
 					</div>
 					<div class="ajax-response"></div>
