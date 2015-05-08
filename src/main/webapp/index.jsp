@@ -28,7 +28,7 @@
 
     <!-- Services start -->
 
-	<section id="services" class="pfblock pfblock-gray">
+	<section id="services" class="pfblock pfblock-gray pfblock-traxes">
 		<div class="container">
 			<div class="row">
 
@@ -299,14 +299,14 @@
 			<div class="row">
 
 				<div class="col-md-12 col-lg-12">
-					<h2 class="wow slideInRight" data-wow-delay=".1s">ARE YOU READY TO START?</h2>
+					<h2 class="wow slideInRight" data-wow-delay=".1s">Sabe aquela dúvida mortal?</h2>
 					<div class="calltoaction-decription wow slideInRight" data-wow-delay=".2s">
-						I'm available for freelance projects.
+						Pois é, mande para nós!
 					</div>
 				</div>
 
 				<div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
-					<a href="#contact" class="btn btn-lg">Hire Me</a>
+					<a href="#contact" class="btn btn-lg">Fale Conosco</a>
 				</div>
 
 			</div><!-- .row -->

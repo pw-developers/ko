@@ -1,80 +1,191 @@
 <%@include file="../assets/includes/header.html"%>
 <%@include file="../assets/includes/menu-header.html"%>
-<section id="noticias" class="pfblock">
+<section class="title-page">
 	<div class="container">
+		<div class="row">
+			<p>Notícias</p>
+		</div>
+	</div>
+</section>
+<section id="noticias" class="pfblock">
+	<div id="wrapper" class="active">
+
+		<!-- Sidebar -->
 		<%@include file="../assets/includes/sidebar.html"%>
 
-		<div id="blog" class="row">
-			<div class="col-md-10 blogShort">
-				<h1>Title 1</h1>
-				<img
-					src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg"
-					alt="post img"
-					class="pull-left img-responsive thumb margin10 img-thumbnail">
+		<!-- Page content -->
+		<div id="page-content-wrapper">
+			<!-- Keep all page content within the page-content inset div! -->
+			<div class="page-content inset">
+				<div class="row">
+					<div class="container">
+						<div class="well wow fadeInUp animated">
+							<div class="media">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/idosos-mortal-kombat-X-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">IDOSOS E MORTAL KOMBAT X</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 
-				<em>This snippet use <a
-					href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation"
-					target="_blank">Sexy Sidebar Navigation</a></em>
-				<article>
-					<p>Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the industry's standard
-						dummy text ever since the 1500s, when an unknown printer took a
-						galley of type and scrambled it to make a type specimen book. It
-						has survived not only five centuries, but also the leap into
-						electronic typesetting, remaining essentially unchanged. It was
-						popularised in the 1960s with the release of Letraset sheets
-						containing Lorem Ipsum passages, and more recently with desktop
-						publishing software like Aldus PageMaker including versions of
-						Lorem Ipsum.</p>
-				</article>
-				<a class="btn btn-lg pull-right marginBottom10"
-					href="http://bootsnipp.com/user/snippets/2RoQ">READ MORE</a>
-			</div>
-			<div class="col-md-10 blogShort">
-				<h1>Title 2</h1>
-				<img
-					src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/DSC_4073-150x150.jpg"
-					alt="post img"
-					class="pull-left img-responsive thumb margin10 img-thumbnail">
-				<article>
-					<p>Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the industry's standard
-						dummy text ever since the 1500s, when an unknown printer took a
-						galley of type and scrambled it to make a type specimen book. It
-						has survived not only five centuries, but also the leap into
-						electronic typesetting, remaining essentially unchanged. It was
-						popularised in the 1960s with the release of Letraset sheets
-						containing Lorem Ipsum passages, and more recently with desktop
-						publishing software like Aldus PageMaker including versions of
-						Lorem Ipsum.</p>
-				</article>
-				<a class="btn btn-lg pull-right marginBottom10"
-					href="http://bootsnipp.com/user/snippets/2RoQ">READ MORE</a>
-			</div>
 
-			<div class="col-md-10 blogShort">
-				<h1>Title 3</h1>
-				<img
-					src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/DSC_1681-150x150.jpg"
-					alt="post img"
-					class="pull-left img-responsive thumb margin10 img-thumbnail">
-				<article>
-					<p>Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry. Lorem Ipsum has been the industry's standard
-						dummy text ever since the 1500s, when an unknown printer took a
-						galley of type and scrambled it to make a type specimen book. It
-						has survived not only five centuries, but also the leap into
-						electronic typesetting, remaining essentially unchanged. It was
-						popularised in the 1960s with the release of Letraset sheets
-						containing Lorem Ipsum passages, and more recently with desktop
-						publishing software like Aldus PageMaker including versions of
-						Lorem Ipsum.</p>
-				</article>
-				<a class="btn btn-lg pull-right marginBottom10"
-					href="http://bootsnipp.com/user/snippets/2RoQ">READ MORE</a>
-			</div>
+						<div class="well wow fadeInUp animated">
+							<div class="media">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/kojima-vs-konami-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">KOJIMA VS KONAMI</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 
-			<div class="col-md-12 gap10"></div>
+
+						<div class="well wow fadeInUp animated">
+							<div class="media">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/the-witcher-3-sex-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">16 HORAS DE SEXO THE WITCHER 3</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="well wow fadeInUp animated">
+							<div class="media wow slideInRight animated">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/destiny-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">DESTINY E UMA NOVA EXPANSÃO?</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

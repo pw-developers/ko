@@ -5,7 +5,7 @@
 <section class="title-page">
 	<div class="container">
 		<div class="row">
-			<p>Sobre nós</p>
+			<p>Sobre nÃ³s</p>
 		</div>
 	</div>
 </section>
@@ -14,7 +14,7 @@
 		<div class="row">
 			<br> <br>
 			<div class="col-sm-3">
-				<div class="iconbox wow slideInLeft">
+				<div class="iconbox wow slideInLeft animated">
 					<div class="span3 well hvr-underline-reveal">
 						<img src="assets/images/about-us/gustavo-xavier.jpg" name="aboutme"
 							width="140" height="140" class="img-circle">
@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="col-sm-3">
-				<div class="iconbox wow slideInLeft">
+				<div class="iconbox wow slideInLeft animated">
 					<div class="span3 well hvr-underline-reveal">
 						<img src="assets/images/about-us/igor-bastos.jpg" name="aboutme"
 							width="140" height="140" class="img-circle">
@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="col-sm-3">
-				<div class="iconbox wow slideInLeft">
+				<div class="iconbox wow slideInRight animated">
 					<div class="span3 well hvr-underline-reveal">
 						<img src="assets/images/about-us/michael-villander.jpg" name="aboutme"
 							width="140" height="140" class="img-circle">
@@ -53,7 +53,7 @@
 			</div>
 
 			<div class="col-sm-3">
-				<div class="iconbox wow slideInLeft">
+				<div class="iconbox wow slideInRight animated">
 					<div class="span3 well hvr-underline-reveal">
 						<img src="assets/images/about-us/ricardo-castelo.jpg" name="aboutme"
 							width="140" height="140" class="img-circle">
