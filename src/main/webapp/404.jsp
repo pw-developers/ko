@@ -15,7 +15,7 @@
 						A Página não foi encontrada, verifique se o que você está procurando está sendo digitado corretamente.
 					</div>
 					<div class="clearfix">
-						<a class="btn btn-lg" href="/ko/index.jsp">Voltar para Página Inicial </a>
+						<a class="btn btn-lg" href="/ko/ko?caminho=index">Voltar para Página Inicial </a>
 					</div>
 				</footer>
 			</div>

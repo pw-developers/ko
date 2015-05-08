@@ -22,13 +22,13 @@ public class KoServlet extends HttpServlet {
 		// Redireciona a pagina
 		if (caminho != null) {
 			if (caminho.equals("index")) {
-				req.getRequestDispatcher("/index.jsp").forward(req, resp);
+				resp.sendRedirect("index.jsp");
 			} else if (caminho.equals("contato")) {
-				req.getRequestDispatcher("/contato.jsp").forward(req, resp);
+				resp.sendRedirect("contato.jsp");
 			} else if (caminho.equals("noticias")) {
-				req.getRequestDispatcher("/noticias.jsp").forward(req, resp);
+				resp.sendRedirect("noticias.jsp");
 			} else if (caminho.equals("sobrenos")) {
-				req.getRequestDispatcher("/sobrenos.jsp").forward(req, resp);
+				resp.sendRedirect("sobrenos.jsp");
 			}
 		}
 
@@ -40,8 +40,7 @@ public class KoServlet extends HttpServlet {
 			String c_email = (String) req.getParameter("c_email");
 			String c_message = (String) req.getParameter("c_message");
 			if (enviaMSG.equals("enviando")) {
-				String msgErro = EnviarMensagem.validaMsg(c_name, c_email,
-						c_message);
+				String msgErro = EnviarMensagem.validaMsg(c_name, c_email,c_message);
 				if (msgErro.equals("")) {
 					req.setAttribute("enviandoMsg", "true");
 				} else {

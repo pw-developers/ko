@@ -4,7 +4,7 @@
 <section id="admin" class="pfblock">
 	<div class="row">
 		<div class="back-to-home btn btn-lg">
-			<a href="/ko/index.jsp"><span class="glyphicon glyphicon-circle-arrow-left"></span>Voltar
+			<a href="/ko/ko?caminho=index"><span class="glyphicon glyphicon-circle-arrow-left"></span>Voltar
 				para Página Inicial</a>
 		</div>
 	</div>
