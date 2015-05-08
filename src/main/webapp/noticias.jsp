@@ -1,60 +1,191 @@
 <%@include file="../assets/includes/header.html"%>
 <%@include file="../assets/includes/menu-header.html"%>
-<section id="noticias" class="pfblock">
+<section class="title-page">
 	<div class="container">
+		<div class="row">
+			<p>Notícias</p>
+		</div>
+	</div>
+</section>
+<section id="noticias" class="pfblock">
+	<div id="wrapper" class="active">
+
+		<!-- Sidebar -->
 		<%@include file="../assets/includes/sidebar.html"%>
 
-		<div id="blog" class="row">
-			<div class="col-md-10 blogShort">
-				<h2>Idosos e Mortal Kombat X</h2>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-				<img 
-					src="assets/images/idosos-mortal-kombat-X-1.jpg"
-					alt="post img"
-					class="pull-left img-responsive thumb margin10 img-thumbnail">
-				</div>
-				<em>This snippet use <a
-					href="http://bootsnipp.com/snippets/featured/sexy-sidebar-navigation"
-					target="_blank">Sexy Sidebar Navigation</a></em>
-				<article>
-					<p>O que a sua avó diria ao ver você jogando Mortal Kombat X? Ver a reação das pessoas em determinadas situações tornou-se comum no YouTube. Atualmente, diversos canais mostram isso, e é claro que alguém fez isso com Mortal Kombat X.
-					O canal React colocou uma série de idosos para jogar entre si. A galera se impressiona com a quantidade de sangue e os avisos de violência na embalagem, mas logo que começam a jogar se empolgam com as lutas...</p>
-				</article>
-				<a class="btn btn-lg pull-right marginBottom10"
-					href="http://bootsnipp.com/user/snippets/2RoQ">Ler Mais</a>
-			</div>
+		<!-- Page content -->
+		<div id="page-content-wrapper">
+			<!-- Keep all page content within the page-content inset div! -->
+			<div class="page-content inset">
+				<div class="row">
+					<div class="container">
+						<div class="well wow fadeInUp animated">
+							<div class="media">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/idosos-mortal-kombat-X-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">IDOSOS E MORTAL KOMBAT X</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 
-			 <div class="col-md-10 blogShort">
-				<h2>Kojima VS Konami</h2>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-				<img
-					src="assets/images/kojima-vs-konami-1.jpg"
-					alt="post img"
-					class="pull-left img-responsive thumb margin10 img-thumbnail">
-				</div>
-				<article>
-					<p>Depois do litígio entre Hideo Kojima e a Konami, depois do novo Silent Hills ter sido cancelado e da companhia japonesa ter anunciado que está de saída da bolsa de valores de Nova Iorque, Georges Weidman, editor do site Super Bunnyhop, contou que segundo uma fonte direta da Konami, Hideo Kojima poderá ter deixado a companhia porque ela vai passar a focar-se nos jogos de casino e no mercado mobile, além disso parece que o diretor geral da Konami, Kagemasa Kozuki, detesta Kojima e estaria disposto a acabar com a série Metal Gear...</p>
-				</article>
-				<a class="btn btn-lg pull-right marginBottom10"
-					href="http://bootsnipp.com/user/snippets/2RoQ">Ler Mais</a>
-			</div>
 
-			<div class="col-md-10 blogShort">
-				<h2>Dota 2 International</h2>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-				<img
-					src="assets/images/dota-2.jpg"
-					alt="post img"
-					class="pull-left img-responsive thumb margin10 img-thumbnail">
-				</div>
-				<article>
-					<p>Pouco mais de 60 horas depois que foi lançado, as compras evento do  Dota 2, International 2015 Compendium tem aumentado o valor do prêmio para mais de $5 milhões de dólares. Apenas 25% dos rendimentos reais de compras dos jogadores são destinadas ao prêmio, mas os jogadores levantaram $3,4 milhões de dólares no momento da inscrição, deixando a Valve com um lucro $10,2 milhões de dólares em vendas...</p>
-				</article>
-				<a class="btn btn-lg pull-right marginBottom10"
-					href="http://bootsnipp.com/user/snippets/2RoQ">Ler Mais</a>
-			</div>
+						<div class="well wow fadeInUp animated">
+							<div class="media">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/kojima-vs-konami-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">KOJIMA VS KONAMI</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 
-			<div class="col-md-12 gap10"></div>
+
+						<div class="well wow fadeInUp animated">
+							<div class="media">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/the-witcher-3-sex-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">16 HORAS DE SEXO THE WITCHER 3</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="well wow fadeInUp animated">
+							<div class="media wow slideInRight animated">
+								<a class="pull-left" href="#"> <img class="media-object"
+									src="assets/images/destiny-1.jpg">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">DESTINY E UMA NOVA EXPANSÃO?</h4>
+									<p class="text-right">
+										Por <span class="author">K.O</span>
+									</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										Duis pharetra varius quam sit amet vulputate. Quisque mauris
+										augue, molestie tincidunt condimentum vitae, gravida a libero.
+										Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci
+										quis tortor imperdiet venenatis. Duis elementum auctor
+										accumsan. Aliquam in felis sit amet augue.</p>
+									<ul class="list-inline list-unstyled">
+										<li><span class="date-hour"><i
+												class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+										<li>|</li>
+										<span><i class="glyphicon glyphicon-comment"></i> 2
+											comments</span>
+										<li>|</li>
+										<li><span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span></li>
+										<li>|</li>
+										<li>
+											<!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+											<span><i class="fa fa-facebook-square"></i></span> <span><i
+												class="fa fa-twitter-square"></i></span> <span><i
+												class="fa fa-google-plus-square"></i></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
