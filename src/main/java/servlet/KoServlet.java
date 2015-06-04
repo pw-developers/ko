@@ -13,8 +13,7 @@ import contato.EnviarMensagem;
 @WebServlet(value = "/ko")
 public class KoServlet extends HttpServlet {
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		String caminho = req.getParameter("caminho");
 		String enviaMSG = req.getParameter("enviaMsg");

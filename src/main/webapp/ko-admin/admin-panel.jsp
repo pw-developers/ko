@@ -1,4 +1,5 @@
-<%@include file="../ko-admin/assets/includes/header.html"%>
+
+<%@include file="../assets/includes/header.html"%>
 
 <!-- Admin Panel Start -->
 <section id="admin-panel">

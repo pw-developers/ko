@@ -1,44 +1,115 @@
 package servlet;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebFilter(urlPatterns = "/ko-admin/*")
 @WebServlet(value = "/AdminServlet")
-public class AdminServlet extends HttpServlet implements Filter {
+public class AdminServlet extends HttpServlet  {
+private Connection conexao;
 	
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		System.out.println("Aqui1");
-		HttpServletRequest req = (HttpServletRequest) request;
-		HttpServletResponse resp = (HttpServletResponse) response;
-		Boolean logado = (Boolean) req.getSession().getAttribute("logado");
-		
-		if (logado != null && logado) {
-			chain.doFilter(request, response);
-		} else {
-			resp.sendRedirect("../admin.jsp");
+	@Override
+	public void init() throws ServletException {
+		try {
+			criar();
+			insereUserAdmin();
+		} catch(Exception e) {
+			System.err.println(e.getMessage());
 		}
 	}
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		try {
+			System.out.println("Entrou no Servlet");
+			String comando = req.getParameter("comando");
+
+			if (comando == null) {
+				System.out.println("AdminServlet redirecionou admin.jsp");
+				resp.sendRedirect("./admin.jsp");
+			} else if (comando.equals("realizarLogin")) {
+				String login = req.getParameter("login");
+				String senha = req.getParameter("senha");
+				if(!login.isEmpty() && !senha.isEmpty()){
+					req.setAttribute("logado", true);
+					System.out.println("Redirecionou admin-panel.jsp");
+					//resp.sendRedirect("./ko-admin/admin-panel.jsp");
+					req.getRequestDispatcher("./ko-admin/admin-panel.jsp").include(req, resp);
+				}else{
+					System.out.println("AdminServlet redirecionou admin.jsp");
+					resp.sendRedirect("./admin.jsp");
+				}
+			}
+		} catch (Throwable e) {
+			//Retorna o 404
+			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
+			e.printStackTrace();
+		}
 	}
 
-	public void init(FilterConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
-		
-	}
+	/*private void transferir(int valor, int contaOrigem, int contaDestino) throws SQLException {
+		String url = "jdbc:derby:db;create=true";
+		conexao = DriverManager.getConnection(url);
+		//Abrir transação.
+		conexao.setAutoCommit(false);
+		try {
+			Statement stmt = conexao.createStatement();
+			stmt.executeUpdate("update conta "
+					+ "set saldo = (saldo - " + valor + ") "
+					+ "where numero = " + contaOrigem);
 
+			if (valor > 10) {
+				throw new RuntimeException("Valor não permitido.");
+			}
+			
+			stmt.executeUpdate("update conta "
+					+ "set saldo = (saldo + " + valor + ") "
+					+ "where numero = " + contaDestino);
+			//Fechando transação efetivando comandos.
+			conexao.commit();
+		} catch(Exception e) {
+			System.err.println(e.getMessage());
+			//Fechando transação descartando comandos.
+			conexao.rollback();
+		}
+	}*/
+
+	private void criar() throws SQLException {
+		String sql = ""
+				+ "create table usuario ("
+				+ "  login varchar(20) not null,"
+				+ "  senha varchar(20) not null,"
+				+ "  constraint pk_conta primary key (login) "
+				+ ")";
+		String url = "jdbc:derby:db;create=true";
+		conexao = DriverManager.getConnection(url);
+		Statement stmt = conexao.createStatement();
+		stmt.execute(sql);
+		stmt.close();
+	}
+	
+	private void insereUserAdmin() throws SQLException {
+		String sql = ""
+				+ "insert into usuario "
+				+ "  (login, senha) "
+				+ "  values "
+				+ "  ('admin', 'koiwin') ";
+		String url = "jdbc:derby:db;create=true";
+		conexao = DriverManager.getConnection(url);
+		Statement stmt = conexao.createStatement();
+		stmt.execute(sql);
+		stmt.close();
+	}
 }

@@ -21,14 +21,14 @@
 						<h3 class="panel-title">Administração</h3>
 					</div>
 					<div class="panel-body">
-						<form accept-charset="UTF-8" role="form">
+						<form accept-charset="UTF-8" role="form" action="/ko/AdminServlet">
 							<fieldset>
 								<div class="form-group">
-									<input class="form-control" placeholder="Usuário" name="user"
+									<input class="form-control" placeholder="Usuário" name="login"
 										type="text">
 								</div>
 								<div class="form-group">
-									<input class="form-control" placeholder="Senha" name="password"
+									<input class="form-control" placeholder="Senha" name="senha"
 										type="password" value="">
 								</div>
 								<div class="checkbox">
@@ -36,7 +36,7 @@
 										value="Remember Me"> Lembrar-me
 									</label>
 								</div>
-								<input class="btn btn-lg btn-success btn-block" type="submit"
+								<input name="comando" value="realizarLogin" class="btn btn-lg btn-success btn-block" type="submit"
 									value="Entrar">
 							</fieldset>
 						</form>
