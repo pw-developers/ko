@@ -15,12 +15,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(value = "/AdminServlet")
 public class AdminServlet extends HttpServlet  {
 private Connection conexao;
 	
-	@Override
+	/*@Override
 	public void init() throws ServletException {
 		try {
 			criar();
@@ -28,7 +29,7 @@ private Connection conexao;
 		} catch(Exception e) {
 			System.err.println(e.getMessage());
 		}
-	}
+	}*/
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -43,10 +44,12 @@ private Connection conexao;
 				String login = req.getParameter("login");
 				String senha = req.getParameter("senha");
 				if(!login.isEmpty() && !senha.isEmpty()){
-					req.setAttribute("logado", true);
+					boolean name =  true;
+					HttpSession session=req.getSession();  
+			        session.setAttribute("logado",name); 
 					System.out.println("Redirecionou admin-panel.jsp");
-					//resp.sendRedirect("./ko-admin/admin-panel.jsp");
-					req.getRequestDispatcher("./ko-admin/admin-panel.jsp").include(req, resp);
+					resp.sendRedirect("./ko-admin/admin-panel.jsp");
+					//req.getRequestDispatcher("./ko-admin/admin-panel.jsp").include(req, resp);
 				}else{
 					System.out.println("AdminServlet redirecionou admin.jsp");
 					resp.sendRedirect("./admin.jsp");
