@@ -36,7 +36,7 @@
 										value="Remember Me"> Lembrar-me
 									</label>
 								</div>
-								<input name="comando" value="realizarLogin" class="btn btn-lg btn-success btn-block" type="submit"
+								<input name="comando" class="btn btn-lg btn-success btn-block" type="submit"
 									value="Entrar">
 							</fieldset>
 						</form>

@@ -40,7 +40,7 @@ private Connection conexao;
 			if (comando == null) {
 				System.out.println("AdminServlet redirecionou admin.jsp");
 				resp.sendRedirect("./admin.jsp");
-			} else if (comando.equals("realizarLogin")) {
+			} else if (comando.equals("Entrar")) {
 				String login = req.getParameter("login");
 				String senha = req.getParameter("senha");
 				if(!login.isEmpty() && !senha.isEmpty()){
