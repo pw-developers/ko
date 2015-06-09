@@ -41,11 +41,12 @@ private Connection conexao;
 				System.out.println("AdminServlet redirecionou admin.jsp");
 				resp.sendRedirect("./admin.jsp");
 			} else if (comando.equals("Entrar")) {
+				HttpSession session = req.getSession();
+				session.setAttribute("logado", false);
 				String login = req.getParameter("login");
 				String senha = req.getParameter("senha");
 				if(!login.isEmpty() && !senha.isEmpty()){
 					boolean name =  true;
-					HttpSession session=req.getSession();  
 			        session.setAttribute("logado",name); 
 					System.out.println("Redirecionou admin-panel.jsp");
 					resp.sendRedirect("./ko-admin/admin-panel.jsp");
@@ -54,6 +55,8 @@ private Connection conexao;
 					System.out.println("AdminServlet redirecionou admin.jsp");
 					resp.sendRedirect("./admin.jsp");
 				}
+			}else if (comando.equals("erro404")){
+				req.getRequestDispatcher("./ko-admin/admin-pan123el.jsp").include(req, resp);
 			}
 		} catch (Throwable e) {
 			//Retorna o 404

@@ -1,5 +1,5 @@
+<%@include file="./assets/includes/header.html"%>
 
-<%@include file="../ko-admin/assets/includes/header.html"%>
 
 <!-- Admin Panel Start -->
 <section id="admin-panel">
@@ -45,7 +45,7 @@
 													<div id="dropdown-lvl2" class="panel-collapse collapse">
 														<div class="panel-body">
 															<ul class="nav navbar-nav">
-																<li><a href="#">Link</a></li>
+																<li><a href="/ko/AdminServlet?comando=erro404">Link1</a></li>
 																<li><a href="#">Link</a></li>
 																<li><a href="#">Link</a></li>
 															</ul>
@@ -69,7 +69,10 @@
 		<div class="col-md-10 content">
 			<div class="panel panel-default">
 				<div class="panel-heading">Dashboard</div>
-				<div class="panel-body">Lorem ipsum dolor sit amet,
+				<div class="panel-body"><% if((Boolean) session.getAttribute("logado")){
+						out.print("teste");
+					}else{out.print("teste1");}%> Lorem ipsum dolor sit amet,
+				}
 					consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
 					labore et dolore magna aliqua. Ut enim ad minim veniam, quis
 					nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
