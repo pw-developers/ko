@@ -1,8 +1,16 @@
 package admin;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="usuario")
 public class Usuario {
 	//Atributos
+	@Id
+	@Column(name = "login", length = 20, nullable = false)
 	private String login;
+	
+	@Column(name = "senha", length = 20, nullable = false)
 	private String senha;
 	
 	//Construtores
