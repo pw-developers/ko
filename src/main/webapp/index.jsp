@@ -382,5 +382,11 @@
     <script src="assets/js/jquery.cbpQTRotator.js"></script>
 	<script src="assets/js/custom.js"></script>
 
+<p>
+awdfg
+<a href="login-admin">LOGIN ADMIN</a>
+asdgf
+</p>
+
 </body>
 </html>

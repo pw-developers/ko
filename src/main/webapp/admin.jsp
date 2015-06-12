@@ -1,5 +1,7 @@
 <%@include file="../assets/includes/header.html"%>
 
+${campoX}
+
 <!-- Login Start -->
 <section id="admin" class="pfblock">
 	<div class="row">
@@ -21,7 +23,7 @@
 						<h3 class="panel-title">Administração</h3>
 					</div>
 					<div class="panel-body">
-						<form accept-charset="UTF-8" role="form" action="/ko/AdminServlet">
+						<form accept-charset="UTF-8" role="form" action="/login-admin.ko">
 							<fieldset>
 								<div class="form-group">
 									<input class="form-control" placeholder="Usuário" name="login"

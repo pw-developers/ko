@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -49,8 +50,13 @@ private Connection conexao;
 					boolean name =  true;
 			        session.setAttribute("logado",name); 
 					System.out.println("Redirecionou admin-panel.jsp");
-					resp.sendRedirect("./ko-admin/admin-panel.jsp");
-					//req.getRequestDispatcher("./ko-admin/admin-panel.jsp").include(req, resp);
+					//resp.sendRedirect("./ko-admin/admin-panel.jsp");
+					req.getRequestDispatcher("./ko-admin/admin-panel.jsp").forward(req, resp);
+					
+//					req.setAttribute("message", "mano");
+//					RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("./ko-admin/admin-panel.jsp");
+//					dispatcher.forward(req, resp);
+					
 				}else{
 					System.out.println("AdminServlet redirecionou admin.jsp");
 					resp.sendRedirect("./admin.jsp");
@@ -68,7 +74,7 @@ private Connection conexao;
 	/*private void transferir(int valor, int contaOrigem, int contaDestino) throws SQLException {
 		String url = "jdbc:derby:db;create=true";
 		conexao = DriverManager.getConnection(url);
-		//Abrir transação.
+		//Abrir transaï¿½ï¿½o.
 		conexao.setAutoCommit(false);
 		try {
 			Statement stmt = conexao.createStatement();
@@ -77,17 +83,17 @@ private Connection conexao;
 					+ "where numero = " + contaOrigem);
 
 			if (valor > 10) {
-				throw new RuntimeException("Valor não permitido.");
+				throw new RuntimeException("Valor nï¿½o permitido.");
 			}
 			
 			stmt.executeUpdate("update conta "
 					+ "set saldo = (saldo + " + valor + ") "
 					+ "where numero = " + contaDestino);
-			//Fechando transação efetivando comandos.
+			//Fechando transaï¿½ï¿½o efetivando comandos.
 			conexao.commit();
 		} catch(Exception e) {
 			System.err.println(e.getMessage());
-			//Fechando transação descartando comandos.
+			//Fechando transaï¿½ï¿½o descartando comandos.
 			conexao.rollback();
 		}
 	}*/
