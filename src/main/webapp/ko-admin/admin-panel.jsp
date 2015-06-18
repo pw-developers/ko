@@ -1,10 +1,12 @@
-<%@include file="./assets/includes/header.html"%>
+
+<jsp:include page="/ko-admin/assets/includes/header.html"></jsp:include>
+
 
 
 <!-- Admin Panel Start -->
 <section id="admin-panel">
-
-	<%@include file="../ko-admin/assets/includes/navbar.html"%>
+	<jsp:include page="/ko-admin/assets/includes/navbar.html"></jsp:include>
+	
 	<div class="container-fluid main-container">
 		<div class="col-md-2 sidebar">
 			<div class="row">
@@ -84,19 +86,19 @@
 		</div>
 	</div>
 </section>
-<%@include file="../ko-admin/assets/includes/footer.html"%>
+<jsp:include page="/ko-admin/assets/includes/footer.html"></jsp:include>
 
 <!-- Scripts -->
-<script src="../assets/js/jquery-1.11.1.min.js"></script>
-<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="../assets/js/imagesloaded.pkgd.js"></script>
-<script src="../assets/js/jquery.sticky.js"></script>
-<script src="../assets/js/smoothscroll.js"></script>
-<script src="../assets/js/wow.min.js"></script>
-<script src="../assets/js/jquery.easypiechart.js"></script>
-<script src="../assets/js/waypoints.min.js"></script>
-<script src="../assets/js/jquery.cbpQTRotator.js"></script>
-<script src="../assets/js/custom.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="http://localhost:9090/ko/assets/js/jquery-1.11.1.min.js"></script>
+<script src="http://localhost:9090/ko/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://localhost:9090/ko/assets/js/imagesloaded.pkgd.js"></script>
+<script src="http://localhost:9090/ko/assets/js/jquery.sticky.js"></script>
+<script src="http://localhost:9090/ko/assets/js/smoothscroll.js"></script>
+<script src="http://localhost:9090/ko/assets/js/wow.min.js"></script>
+<script src="http://localhost:9090/ko/assets/js/jquery.easypiechart.js"></script>
+<script src="http://localhost:9090/ko/assets/js/waypoints.min.js"></script>
+<script src="http://localhost:9090/ko/assets/js/jquery.cbpQTRotator.js"></script>
+<script src="http://localhost:9090/ko/assets/js/custom.js"></script>
+<script src="http://localhost:9090/ko/assets/js/custom.js"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@ ${campoX}
 						<h3 class="panel-title">Administração</h3>
 					</div>
 					<div class="panel-body">
-						<form accept-charset="UTF-8" role="form" action="/login-admin.ko">
+						<form accept-charset="UTF-8" role="form" action="/ko/login-admin.ko">
 							<fieldset>
 								<div class="form-group">
 									<input class="form-control" placeholder="Usuário" name="login"
