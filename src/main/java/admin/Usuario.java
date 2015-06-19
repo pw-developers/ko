@@ -7,7 +7,12 @@ import javax.persistence.*;
 public class Usuario {
 	//Atributos
 	@Id
-	@Column(name = "login", length = 20, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id",unique=true, nullable = false)
+	private long id;
+	
+	@Column(name = "login", length = 20, unique = true, nullable = false)
 	private String login;
 	
 	@Column(name = "senha", length = 20, nullable = false)
@@ -17,6 +22,14 @@ public class Usuario {
 	public Usuario(){}
 
 	//Getters and Setters
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+	
 	public String getLogin() {
 		return login;
 	}
