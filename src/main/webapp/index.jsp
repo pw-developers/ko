@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<% UsuarioModelDAO userMod = new UsuarioModelDAO(); %>
+	<% UsuarioDAO userMod = new UsuarioDAO(); %>
 	<a href="./addUser.jsp">Inserir novo usuário</a>
 	<br>
 	<table cellpadding="2" cellspacing="2" border="1">
