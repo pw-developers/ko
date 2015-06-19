@@ -4,6 +4,7 @@
 <%@ page import="dao.*" %>
 <%@ page import="admin.*" %>
 <%@ page import="java.util.*" %>
+<%@ page import="javax.persistence.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,7 +13,6 @@
 </head>
 <body>
 
-	<% UsuarioDAO userMod = new UsuarioDAO(); %>
 	<a href="./addUser.jsp">Inserir novo usuário</a>
 	<br>
 	<table cellpadding="2" cellspacing="2" border="1">
@@ -21,7 +21,7 @@
 			<th>Login</th>
 			<th>Senha</th>
 		</tr>
-		<c:forEach var="p" items="<%= userMod.findAll() %>">
+		<c:forEach var="p" items="${listaUsuarios}">
 			<tr>
 				<td>${p.id}</td>
 				<td>${p.login}</td>

@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.JpaUtil;
 import admin.Usuario;
 
 @WebServlet(value = "/AdminServlet")
@@ -76,7 +77,7 @@ private Connection conexao;
 	/*private void transferir(int valor, int contaOrigem, int contaDestino) throws SQLException {
 		String url = "jdbc:derby:db;create=true";
 		conexao = DriverManager.getConnection(url);
-		//Abrir transação.
+		//Abrir transaï¿½ï¿½o.
 		conexao.setAutoCommit(false);
 		try {
 			Statement stmt = conexao.createStatement();
@@ -85,17 +86,17 @@ private Connection conexao;
 					+ "where numero = " + contaOrigem);
 
 			if (valor > 10) {
-				throw new RuntimeException("Valor não permitido.");
+				throw new RuntimeException("Valor nï¿½o permitido.");
 			}
 			
 			stmt.executeUpdate("update conta "
 					+ "set saldo = (saldo + " + valor + ") "
 					+ "where numero = " + contaDestino);
-			//Fechando transação efetivando comandos.
+			//Fechando transaï¿½ï¿½o efetivando comandos.
 			conexao.commit();
 		} catch(Exception e) {
 			System.err.println(e.getMessage());
-			//Fechando transação descartando comandos.
+			//Fechando transaï¿½ï¿½o descartando comandos.
 			conexao.rollback();
 		}
 	}*/
@@ -104,9 +105,10 @@ private Connection conexao;
 		try {
 			String sql = ""
 					+ "create table usuario ("
+					+ "  id numeric(18,0) not null,"
 					+ "  login varchar(20) not null,"
 					+ "  senha varchar(20) not null,"
-					+ "  constraint pk_conta primary key (login) "
+					+ "  constraint pk_conta primary key (id) "
 					+ ")";
 			String url = "jdbc:derby:db;create=true";
 			conexao = DriverManager.getConnection(url);
@@ -127,9 +129,9 @@ private Connection conexao;
 			EntityManagerFactory factory = Persistence.createEntityManagerFactory("koDataBase");
 			EntityManager manager = factory.createEntityManager();
 	
-			manager.getTransaction().begin();    
-			manager.persist(usuario);
-			manager.getTransaction().commit();  
+			JpaUtil.getEntityManager().getTransaction().begin();    
+			JpaUtil.getEntityManager().persist(usuario);
+			JpaUtil.getEntityManager().getTransaction().commit();  
 	
 			System.out.println("Usuario: " + usuario.getLogin());
 	

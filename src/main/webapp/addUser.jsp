@@ -18,7 +18,7 @@
 				<td><input type="text" name="senha"></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="left"><input type="submit" value="salvar">Salvar</td>
+				<td colspan="2" align="left"><input type="submit" name="comando" value="salvar">Salvar</td>
 			</tr>
 		</table>
 	</form>

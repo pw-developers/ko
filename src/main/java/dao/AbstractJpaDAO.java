@@ -2,39 +2,44 @@ package dao;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
 public abstract class AbstractJpaDAO<T> {
 
 	private Class<T> clazz;
-
-	@PersistenceContext
-	private EntityManager entityManager;
 
 	public final void setClazz(final Class<T> clazzToSet) {
 		this.clazz = clazzToSet;
 	}
 
 	public T findOne(final long id) {
-		return entityManager.find(clazz, id);
+		return JpaUtil.getEntityManager().find(clazz, id);
 	}
 
-	@SuppressWarnings("unchecked")
 	public List<T> findAll() {
-		return entityManager.createQuery("from " + clazz.getName()).getResultList();
+		return JpaUtil.getEntityManager().createQuery("from " + clazz.getName(), clazz).getResultList();
 	}
 
 	public void create(final T entity) {
-		entityManager.persist(entity);
+		try {
+			JpaUtil.beginTransaction();
+			JpaUtil.getEntityManager().persist(entity);
+			JpaUtil.commit();
+		} catch (Exception e){
+			JpaUtil.rollback();
+		}
 	}
 
 	public T update(final T entity) {
-		return entityManager.merge(entity);
+		return JpaUtil.getEntityManager().merge(entity);
 	}
 
 	public void delete(final T entity) {
-		entityManager.remove(entity);
+		try {
+			JpaUtil.beginTransaction();
+			JpaUtil.getEntityManager().remove(entity);
+			JpaUtil.commit();
+		} catch (Exception e){
+			JpaUtil.rollback();
+		}
 	}
 
 	public void deleteById(final long entityId) {
