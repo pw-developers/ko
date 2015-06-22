@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class Usuario {
 	//Atributos
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", unique = true, nullable = false)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)  
+    //@Column(name = "id", unique = true, nullable = false)
 	private long id;
 	
 	@Column(name = "login", length = 20, unique = true, nullable = false)

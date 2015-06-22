@@ -73,13 +73,6 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Dashboard</div>
 				<div class="panel-body">
-					<%
-						if ((Boolean) session.getAttribute("logado")) {
-							out.print("teste");
-						} else {
-							out.print("teste1");
-						}
-					%>
 					Lorem ipsum dolor sit amet, } consectetur adipisicing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
 					ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

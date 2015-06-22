@@ -15,14 +15,8 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-			<%String envioMSG;
-			if(request.getAttribute("enviandoMsg") == null){
-				envioMSG = "NULL";
-			}else{
-				envioMSG = (String) request.getAttribute("enviandoMsg");
-			}
-
-			if(!envioMSG.equals("NULL")){
+			<% String envioMSG = request.getAttribute("enviandoMsg") == null ? "" : (String) request.getAttribute("enviandoMsg");
+			if(!envioMSG.isEmpty()){
 			%>
 				<small><i></i>Mensagens de alerta - Sucesso e Erro!</i></small>
 				<%
@@ -36,10 +30,11 @@
 				<div class="alert alert-danger">
 					<span class="glyphicon glyphicon-alert"></span><strong>
 						Erro ao enviar a mensagem, tente mais tarde!<br>
-						<%out.print((String) request.getAttribute("enviandoMsgErro")); %></strong>
+						<%=envioMSG%></strong>
 				</div>
 			<%	}
 			}%>
+			
 			</div>
 			<div class="col-sm-6">
 

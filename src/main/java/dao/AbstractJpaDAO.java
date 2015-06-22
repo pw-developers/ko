@@ -18,13 +18,14 @@ public abstract class AbstractJpaDAO<T> {
 		return JpaUtil.getEntityManager().createQuery("from " + clazz.getName(), clazz).getResultList();
 	}
 
-	public void create(final T entity) {
+	public void create(final T entity) throws Exception {
 		try {
 			JpaUtil.beginTransaction();
 			JpaUtil.getEntityManager().persist(entity);
 			JpaUtil.commit();
 		} catch (Exception e){
 			JpaUtil.rollback();
+			throw e;
 		}
 	}
 
@@ -32,17 +33,18 @@ public abstract class AbstractJpaDAO<T> {
 		return JpaUtil.getEntityManager().merge(entity);
 	}
 
-	public void delete(final T entity) {
+	public void delete(final T entity) throws Exception {
 		try {
 			JpaUtil.beginTransaction();
 			JpaUtil.getEntityManager().remove(entity);
 			JpaUtil.commit();
 		} catch (Exception e){
 			JpaUtil.rollback();
+			throw e;
 		}
 	}
 
-	public void deleteById(final long entityId) {
+	public void deleteById(final long entityId) throws Exception {
 		final T entity = findOne(entityId);
 		delete(entity);
 	}

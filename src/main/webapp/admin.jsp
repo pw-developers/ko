@@ -25,6 +25,13 @@ ${campoX}
 					<div class="panel-body">
 						<form accept-charset="UTF-8" role="form" action="/ko/login-admin.ko">
 							<fieldset>
+								<%	String msgErro = request.getAttribute("MsgErro") == null ? "" : (String) request.getAttribute("MsgErro");
+									if(!msgErro.isEmpty()){%>
+										<div class="alert alert-danger">
+											<span class="glyphicon glyphicon-alert"></span>
+											<strong><%=msgErro %></strong>
+										</div>
+									<%} %>
 								<div class="form-group">
 									<input class="form-control" placeholder="Usuário" name="login"
 										type="text">

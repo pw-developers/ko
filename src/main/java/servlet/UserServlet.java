@@ -27,39 +27,29 @@ import admin.Usuario;
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UsuarioDAO userDAO = UsuarioDAO.getInstance();
-	
-	private Connection conexao;
-	
-	@Override
-	public void init() throws ServletException {
-		try {
-			criarDB();
-		} catch(Exception e) {
-			//System.err.println(e.getMessage());
-		}
-	}
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public UserServlet() {
         super();
     }
     
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String comando = req.getParameter("comando");
-		System.out.println("UserServlet Teste1"+comando);
+		String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
+
 		try{
-			if (comando != null) {
-				if(comando.equals("salvar")){
+			if (!comando.isEmpty()) {
+				if(comando.equals("addUser")){
+					forward(req, resp, "/addUser.jsp");
+				}else if(comando.equals("salvar")){
 					salvar(req);
 				} else if(comando.equals("deletar")){
 					deletar(req);
 				}
 			}
-			listar(req);
-			forward(req, resp, "/index.jsp");
+			if(!comando.equals("addUser")){
+				listar(req);
+				forward(req, resp, "/index2.jsp");
+			}
 		} catch (Throwable e) {
 			//Retorna o 404
 			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
@@ -74,7 +64,7 @@ public class UserServlet extends HttpServlet {
 		req.setAttribute("listaUsuarios", listaUsuario);
 	}
 
-	protected void salvar(HttpServletRequest request) {
+	protected void salvar(HttpServletRequest request) throws Exception {
 		Usuario user = new Usuario();
 		user.setLogin(request.getParameter("login"));
 		user.setSenha(request.getParameter("senha"));
@@ -82,29 +72,10 @@ public class UserServlet extends HttpServlet {
 		System.out.println("Salvar Teste1");
 	}
 
-	protected void deletar(HttpServletRequest request) {
+	protected void deletar(HttpServletRequest request) throws Exception {
 		String id = request.getParameter("id");
 		userDAO.deleteById(Long.valueOf(id));
 		System.out.println("Deletar Teste1");
-	}
-
-	private void criarDB() throws SQLException {
-		try {
-			String sql = ""
-					+ "create table usuario ("
-					+ "  id numeric(18,0) not null,"
-					+ "  login varchar(20) not null,"
-					+ "  senha varchar(20) not null,"
-					+ "  constraint pk_conta primary key (id) "
-					+ ")";
-			String url = "jdbc:derby:db;create=true";
-			conexao = DriverManager.getConnection(url);
-			Statement stmt = conexao.createStatement();
-			stmt.execute(sql);
-			stmt.close();
-		} catch(Exception e) {
-			System.err.println("criarDB: "+e.getMessage());
-		}
 	}
 
 }

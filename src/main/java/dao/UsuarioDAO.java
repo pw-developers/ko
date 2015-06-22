@@ -1,6 +1,11 @@
 package dao;
 
+import java.util.ArrayList;
+
+import javax.persistence.Query;
+
 import admin.Usuario;
+import java.util.List;
 
 public class UsuarioDAO extends AbstractJpaDAO<Usuario> {
 	
@@ -16,5 +21,29 @@ public class UsuarioDAO extends AbstractJpaDAO<Usuario> {
 	private UsuarioDAO(){
 		super();
 		setClazz(Usuario.class);
+	}
+	
+	public static boolean validaUsuario(String login, String senha){
+		System.out.println("UsuarioDAO validaUsuario");
+		List userList = (List) findOne(login, senha);
+		System.out.println("UsuarioDAO validaUsuario procurou todos "+login+" "+senha);
+		System.out.println("UsuarioDAO validaUsuario procurou todos "+userList);
+		
+		//Se nao for NULL ou 0, retornara apenas um registro
+		if(userList != null && userList.size() > 0 
+				&& ((Usuario) userList.get(0)).getLogin().equals(login) 
+				&& ((Usuario) userList.get(0)).getSenha().equals(senha)){
+			System.out.println("UsuarioDAO return true");
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	private static List findOne(String login, String senha){
+		Query query = JpaUtil.getEntityManager().createQuery("from Usuario where login = :vlogin and senha = :vsenha");
+		query.setParameter("vlogin", login);
+		query.setParameter("vsenha", senha);
+		return query.getResultList();
 	}
 }

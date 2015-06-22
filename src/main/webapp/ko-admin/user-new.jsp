@@ -4,37 +4,36 @@
 <section id="users">
 	<jsp:include page="/ko-admin/assets/includes/navbar.html"></jsp:include>
 
-	<form action="/ko/UserServlet">
+	<form action="login-admin.ko">
 		<div class="container-fluid main-container">
 			<div class="formulario_add_new_user">
 				<div>
 					<div class="your-name-user">
 						<label class="sr-only">Nome de Usuário</label><input type="text"
-							name="your-name" size="40">
+							name="login-usuario" size="40">
 					</div>
 					<div class="your-email">
 						<label class="sr-only">Email</label><input type="text"
-							name="your-name" size="40">
+							name="email-usuario" size="40">
 					</div>
 					<div class="your-first-name">
 						<label class="sr-only">Nome</label><input type="text"
-							name="your-name" size="40">
+							name="nome-usuario" size="40">
 					</div>
 					<div class="your-last-name">
 						<label class="sr-only">Sobrenome</label><input type="text"
-							name="your-name" size="40">
+							name="sobrenome-usuario" size="40">
 					</div>
 					<div class="your-password">
 						<label class="sr-only">Senha</label><input type="text"
-							name="your-name" size="40">
+							name="senha-usuario" size="40">
 					</div>
 					<div class="your-password-again">
 						<label class="sr-only">Repetir Senha</label><input type="text"
-							name="your-name" size="40">
+							name="repetir-senha-usuario" size="40">
 					</div>
 					<div>
-						<input type="submit" value="Adicionar novo Usuário"
-							class="btn btn-lg btn-block">
+						<input type="submit" name="comando" value="Adicionar novo Usuário" class="btn btn-lg btn-block">
 					</div>
 				</div>
 			</div>
