@@ -635,13 +635,36 @@ textarea.form-control {
 	color: #222;
 }
 
-.navbar-custom .nav li.active,
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .navbar-nav > li.active a {
+.navbar-custom .nav li.active, .navbar-custom .nav li a:hover,
+	.navbar-custom .nav li a:focus, .navbar-custom .navbar-nav>li.active a
+	{
 	background: #c60000;
 	outline: 0;
 	color: #fff;
+}
+
+header .navbar-custom .nav li.loginlink.active, header .navbar-custom .nav li.loginlink:hover,
+	header .navbar-custom .nav li.loginlink:focus, header .navbar-custom .navbar-nav>li.loginlink.active
+	{
+	background-color: #619de5;
+	height: 20px;
+	top: 15px;
+}
+
+header .navbar-custom .nav li.loginlink.active, header .navbar-custom .nav li.loginlink a:hover,
+	header .navbar-custom .nav li.loginlink a:focus, header .navbar-custom .navbar-nav>li.loginlink a.active
+	{
+	background-color: transparent;
+}
+
+.navbar-custom .nav li.loginlink{
+	top: 15px;
+}
+
+.navbar-custom .nav li.loginlink a {
+	font-size: 10px;
+	border-left: 1px solid #dcdcdc;
+	margin-top: -15px;
 }
 
 .navbar-custom .navbar-brand {
@@ -1287,10 +1310,14 @@ span.glyphicon-circle-arrow-left {
 	padding-right: 10px;
 }
 
+.header li.loginlink a span {
+	padding: 0 2px;
+	font-size: 10px;
+}
+
 /*-----------------------*/
 /********* Blog **********/
 /*-----------------------*/
-
 #noticias .media-object{
 	max-width: 280px;
 }

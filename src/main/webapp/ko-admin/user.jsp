@@ -1,25 +1,16 @@
 <jsp:include page="/ko-admin/assets/includes/header.html"></jsp:include>
 <jsp:include page="/ko-admin/assets/includes/navbar.html"></jsp:include>
 
-<!-- Admin Panel Start -->
-<section id="admin-panel">
+<!-- Users Start -->
+<section id="users">
 
 	<div class="container-fluid main-container">
 		<div class="col-md-2 sidebar">
 			<jsp:include page="/ko-admin/assets/includes/sidebar.html"></jsp:include>
 		</div>
-		
 		<div class="col-md-10 content">
-			<div class="panel panel-default">
-				<div class="panel-heading">Dashboard</div>
-				<div class="panel-body">Lorem ipsum dolor sit amet, }
-					consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-					nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate
-					velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-					mollit anim id est laborum.</div>
+			<div>
+				<a href="/ko/ko-admin/user-new.jsp"class="btn btn-lg btn-block">Adicionar Novo</a>
 			</div>
 		</div>
 	</div>

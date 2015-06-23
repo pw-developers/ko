@@ -1,44 +1,57 @@
 <jsp:include page="/ko-admin/assets/includes/header.html"></jsp:include>
+<jsp:include page="/ko-admin/assets/includes/navbar.html"></jsp:include>
 
-<!-- Admin Panel Start -->
-<section id="users">
-	<jsp:include page="/ko-admin/assets/includes/navbar.html"></jsp:include>
+<!-- Add New User Start -->
+<section id="user-new">
 
-	<form action="login-admin.ko">
-		<div class="container-fluid main-container">
-			<div class="formulario_add_new_user">
-				<div>
-					<div class="your-name-user">
-						<label class="sr-only">Nome de Usuário</label><input type="text"
-							name="login-usuario" size="40">
-					</div>
-					<div class="your-email">
-						<label class="sr-only">Email</label><input type="text"
-							name="email-usuario" size="40">
-					</div>
-					<div class="your-first-name">
-						<label class="sr-only">Nome</label><input type="text"
-							name="nome-usuario" size="40">
-					</div>
-					<div class="your-last-name">
-						<label class="sr-only">Sobrenome</label><input type="text"
-							name="sobrenome-usuario" size="40">
-					</div>
-					<div class="your-password">
-						<label class="sr-only">Senha</label><input type="text"
-							name="senha-usuario" size="40">
-					</div>
-					<div class="your-password-again">
-						<label class="sr-only">Repetir Senha</label><input type="text"
-							name="repetir-senha-usuario" size="40">
-					</div>
-					<div>
-						<input type="submit" name="comando" value="Adicionar novo Usuário" class="btn btn-lg btn-block">
+	<div class="container-fluid main-container-admin">
+		<div class="col-md-2 sidebar">
+			<jsp:include page="/ko-admin/assets/includes/sidebar.html"></jsp:include>
+		</div>
+		<div class="col-md-6 content">
+			<div class="row">
+				<p class="title-add-new-user">Adicionar Novo Usuário</p>
+			</div>
+			<form action="">
+				<div class="container-fluid main-container-admin">
+					<div class="formulario_add_new_user">
+						<div>
+							<div class="your-name-user form-margin">
+								<label>Nome de Usuário</label><input type="text"
+									name="login-usuario" size="40" class="input-admin">
+							</div>
+							<div class="your-email form-margin">
+								<label>Email</label><input type="text"
+									name="email-usuario" size="40" class="input-admin">
+							</div>
+							<div class="your-first-name form-margin">
+								<label>Nome</label><input type="text"
+									name="nome-usuario" size="40" class="input-admin">
+							</div>
+							<div class="your-last-name form-margin">
+								<label>Sobrenome</label><input type="text"
+									name="sobrenome-usuario" size="40" class="input-admin">
+							</div>
+							<div class="your-password form-margin">
+								<label>Senha</label><input type="text"
+									name="senha-usuario" size="40" class="input-admin">
+							</div>
+							<div class="your-password-again form-margin">
+								<label>Repetir Senha</label><input type="text"
+									name="repetir-senha-usuario" size="40" class="input-admin">
+							</div>
+							<div>
+								<input type="submit" name="comando"
+									value="Adicionar novo Usuário" class="btn btn-lg btn-block">
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
-	</form>
+		<div class="col-md-4 content"></div>
+	</div>
+
 </section>
 <jsp:include page="/ko-admin/assets/includes/footer.html"></jsp:include>
 
