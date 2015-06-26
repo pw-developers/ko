@@ -1,6 +1,7 @@
 package servlet;
 
 import static servlet.ServletUtil.forward;
+import static servlet.ServletUtil.validaLogin;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -26,25 +27,29 @@ import dao.JpaUtil;
 import dao.UsuarioDAO;
 import admin.Usuario;
 
-@WebServlet(value = "/AdminServlet")
+/**
+ * Servlet que gerencia movimentacao dentro das funcoes de AMD
+ *
+ */
+@WebServlet(value = "/AdminServlet.ko")
 public class AdminServlet extends HttpServlet  {
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-			//Valida login
-			if(!ServletUtil.validaLogin(req, resp)){
+			// Valida login
+			if (!validaLogin(req, resp)) {
 				resp.sendRedirect("/ko/login-admin.ko");
-			}
-
-			String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
-
-			if(!comando.isEmpty() && comando.equals("painel-usuario")){
-				req.setAttribute("comando", "painel-usuario");
-				forward(req, resp, "/UserServlet");
 			} else {
-				//forward(req, resp, "/ko-admin/admin-panel.jsp");
-				resp.sendRedirect("/ko-admin/admin-panel.jsp");
+				String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
+
+				if (!comando.isEmpty() && comando.equals("painel-usuario")) {
+					req.setAttribute("comando", "painel-usuario");
+					forward(req, resp, "/UserServlet.ko");
+				} else {
+					// forward(req, resp, "/ko-admin/admin-panel.jsp");
+					resp.sendRedirect("/ko-admin/admin-panel.jsp");
+				}
 			}
 		} catch (Throwable e) {
 			//Retorna o 404

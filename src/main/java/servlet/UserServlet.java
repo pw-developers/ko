@@ -1,6 +1,7 @@
 package servlet;
 
 import static servlet.ServletUtil.forward;
+import static servlet.ServletUtil.validaLogin;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -21,9 +22,10 @@ import admin.Usuario;
 import dao.UsuarioDAO;
 
 /**
- * Servlet implementation class UserServlet
+ * Servlet para gerenciar o CRUD da entidade Usuario
+ * Todas funcoes relacionadas a Usuario sao gerenciadas aqui
  */
-@WebServlet(value = "/UserServlet")
+@WebServlet(value = "/UserServlet.ko")
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UsuarioDAO userDAO = UsuarioDAO.getInstance();
@@ -38,26 +40,25 @@ public class UserServlet extends HttpServlet {
 
 		try {
 			// Valida login
-			if (!ServletUtil.validaLogin(req, resp)) {
-				resp.sendRedirect("/ko/login-admin.ko");
-			}
-			if (!comando.isEmpty()) {
-				if (comando.equals("addUser")) {
-					forward(req, resp, "./ko-admin/user-new.jsp");
-				} else if (comando.equals("editUser")) {
-					prepararEditar(req);
-					forward(req, resp, "./ko-admin/user-edit.jsp");
-				} else if (comando.equals("salvar")) {
-					salvar(req);
-				} else if (comando.equals("editar")) {
-					editar(req);
-				} else if (comando.equals("deletar")) {
-					deletar(req);
+			{
+				if (!comando.isEmpty()) {
+					if (comando.equals("addUser")) {
+						forward(req, resp, "./ko-admin/user-new.jsp");
+					} else if (comando.equals("editUser")) {
+						prepararEditar(req);
+						forward(req, resp, "./ko-admin/user-edit.jsp");
+					} else if (comando.equals("salvar")) {
+						salvar(req);
+					} else if (comando.equals("editar")) {
+						editar(req);
+					} else if (comando.equals("deletar")) {
+						deletar(req);
+					}
 				}
-			}
-			if (!comando.equals("addUser") && !comando.equals("editUser")) {
-				listar(req);
-				forward(req, resp, "./ko-admin/user.jsp");
+				if (!comando.equals("addUser") && !comando.equals("editUser")) {
+					listar(req);
+					forward(req, resp, "./ko-admin/user.jsp");
+				}
 			}
 		} catch (Throwable e) {
 			// Retorna o 404

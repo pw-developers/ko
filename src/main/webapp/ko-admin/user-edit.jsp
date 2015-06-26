@@ -16,7 +16,7 @@
 			<div class="row">
 				<p class="title-add-new-user">Editar Usuário</p>
 			</div>
-			<form action="/ko/UserServlet?comando=salvar">
+			<form action="/ko/UserServlet.ko?comando=salvar">
 				<div class="container-fluid main-container-admin">
 					<div class="formulario_add_new_user">
 						<div>

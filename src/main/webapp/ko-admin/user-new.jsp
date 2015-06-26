@@ -12,7 +12,7 @@
 			<div class="row">
 				<p class="title-add-new-user">Adicionar Novo Usuário</p>
 			</div>
-			<form action="/ko/UserServlet?comando=salvar">
+			<form action="/ko/UserServlet.ko?comando=salvar">
 				<div class="container-fluid main-container-admin">
 					<div class="formulario_add_new_user">
 						<div>
@@ -40,7 +40,6 @@
 								<label>Repetir Senha</label><input type="text"
 									name="repetir-senha-usuario" size="40" class="input-admin">
 							</div>
-							asdasda
 							<div>
 								<input type="submit" name="comando"
 									value="salvar" class="btn btn-lg btn-block">

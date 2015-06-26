@@ -1,6 +1,7 @@
 package servlet;
 
 import static servlet.ServletUtil.forward;
+import static servlet.ServletUtil.validaLogin;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -22,6 +23,11 @@ import javax.servlet.http.HttpSession;
 
 import dao.UsuarioDAO;
 
+/**
+ * Objetivo: servlet que gerencia o login dos usuarios e cria o BD
+ *
+ */
+
 @WebServlet(value = "/login-admin.ko")
 public class LoginAdminServlet extends HttpServlet {
 
@@ -34,25 +40,20 @@ public class LoginAdminServlet extends HttpServlet {
 		}
 	}
 
-	protected void service(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-			String comando = req.getParameter("comando") == null ? ""
-					: (String) req.getParameter("comando");
+			String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
 
 			if (!comando.isEmpty() && comando.equals("Entrar")) {
-				Boolean validaSenha = ServletUtil.validaLogin(req, resp);
+				Boolean validaSenha = validaLogin(req, resp);
 				if (validaSenha) {
 					HttpSession session = req.getSession();
-					session.setAttribute("login",
-							(String) req.getParameter("login"));
-					session.setAttribute("senha",
-							(String) req.getParameter("senha"));
+					session.setAttribute("login", (String) req.getParameter("login"));
+					session.setAttribute("senha", (String) req.getParameter("senha"));
 					forward(req, resp, "/ko-admin/admin-panel.jsp");
 				} else {
 					if (!validaSenha) {
-						req.setAttribute("MsgErro",
-								"Usu√°rio e/ou Senha inv√°lidos.");
+						req.setAttribute("MsgErro", "Usu·rio e/ou Senha inv·lidos.");
 					}
 					forward(req, resp, "./admin.jsp");
 				}
@@ -69,14 +70,8 @@ public class LoginAdminServlet extends HttpServlet {
 
 	private void criarDB() throws SQLException {
 		try {
-			String sql = "" + "create table usuario ("
-					+ "  id numeric(18,0) not null,"
-					+ "  login varchar(20) not null,"
-					+ "  senha varchar(20) not null,"
-					+ "  nome varchar(40) not null,"
-					+ "  sobrenome varchar(40) not null,"
-					+ "  email varchar(40) not null,"
-					+ "  constraint pk_conta primary key (id) " + ")";
+			String sql = "" + "create table usuario (" + "  id numeric(18,0) not null," + "  login varchar(20) not null," + "  senha varchar(20) not null," + "  nome varchar(40) not null," + "  sobrenome varchar(40) not null,"
+					+ "  email varchar(40) not null," + "  constraint pk_conta primary key (id) " + ")";
 			String sql2 = "insert into usuario (id, login, senha, nome, sobrenome, email) values (0,'admin','koiwin','Admin', 'Admin','admin@komail.com')";
 			String url = "jdbc:derby:db;create=true";
 			Connection conexao;

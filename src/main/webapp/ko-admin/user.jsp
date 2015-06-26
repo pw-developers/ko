@@ -15,7 +15,7 @@
 		</div>
 		<div class="col-md-10 content">
 			<div>
-				<a href="/ko/UserServlet?comando=addUser"
+				<a href="/ko/UserServlet.ko?comando=addUser"
 					class="btn btn-lg btn-block">Adicionar Novo</a>
 			</div>
 			<table cellpadding="2" cellspacing="2" border="1">
@@ -35,9 +35,9 @@
 						<td>${p.email}</td>
 						<td>${p.login}</td>
 						<td>${p.senha}</td>
-						<td><a href="/ko/UserServlet?comando=deletar&id-usuario=${p.id}"
+						<td><a href="/ko/UserServlet.ko?comando=deletar&id-usuario=${p.id}"
 							onclick="return confirm('Você tem certeza?')">Deletar</a></td>
-						<td><a href="/ko/UserServlet?comando=editUser&id-usuario=${p.id}">Editar</a></td>
+						<td><a href="/ko/UserServlet.ko?comando=editUser&id-usuario=${p.id}">Editar</a></td>
 					</tr>
 				</c:forEach>
 			</table>

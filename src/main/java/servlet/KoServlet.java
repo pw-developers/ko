@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import contato.EnviarMensagem;
 
+/**
+ * Servlet que gerencia movimentacao dentro das paginas do site publico
+ *
+ */
 @WebServlet(value = "/ko")
 public class KoServlet extends HttpServlet {
 	@Override

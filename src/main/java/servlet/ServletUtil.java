@@ -8,7 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.UsuarioDAO;
 
-public class ServletUtil {
+/**
+ * Classe com funcoes uteis e comuns a outros Servlets
+ *
+ */
+public abstract class ServletUtil {
 
 	public static void forward(HttpServletRequest req, HttpServletResponse resp, String path) throws ServletException, IOException {
 		req.getRequestDispatcher(path).forward(req, resp);
