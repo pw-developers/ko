@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import servlet.ServletUtil;
 
-@WebFilter(urlPatterns = "*.ko")
+@WebFilter(urlPatterns = { "*.ko", "/ko-admin/*" })
 public class AdminFilter implements Filter {
 
 	public void destroy() {
