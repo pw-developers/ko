@@ -47,7 +47,6 @@ public class KoServlet extends HttpServlet {
 				} else {
 					req.setAttribute("enviandoMsg", "false");
 					req.setAttribute("enviandoMsgErro", msgErro);
-					System.out.println(msgErro);
 				}
 				req.getRequestDispatcher("/contato.jsp").include(req, resp);
 			}

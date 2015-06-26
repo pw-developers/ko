@@ -30,7 +30,10 @@ public abstract class AbstractJpaDAO<T> {
 	}
 
 	public T update(final T entity) {
-		return JpaUtil.getEntityManager().merge(entity);
+		JpaUtil.beginTransaction();
+		T entityReturn = JpaUtil.getEntityManager().merge(entity);
+		JpaUtil.commit();
+		return entityReturn;
 	}
 
 	public void delete(final T entity) throws Exception {

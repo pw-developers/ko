@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.UsuarioDAO;
 import admin.Usuario;
+import dao.UsuarioDAO;
 
 /**
  * Servlet implementation class UserServlet
@@ -28,54 +28,82 @@ public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UsuarioDAO userDAO = UsuarioDAO.getInstance();
 
-    public UserServlet() {
-        super();
-    }
-    
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public UserServlet() {
+		super();
+	}
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
 
-		try{
+		try {
+			// Valida login
+			if (!ServletUtil.validaLogin(req, resp)) {
+				resp.sendRedirect("/ko/login-admin.ko");
+			}
 			if (!comando.isEmpty()) {
-				if(comando.equals("addUser")){
-					forward(req, resp, "/addUser.jsp");
-				}else if(comando.equals("salvar")){
+				if (comando.equals("addUser")) {
+					forward(req, resp, "./ko-admin/user-new.jsp");
+				} else if (comando.equals("editUser")) {
+					prepararEditar(req);
+					forward(req, resp, "./ko-admin/user-edit.jsp");
+				} else if (comando.equals("salvar")) {
 					salvar(req);
-				} else if(comando.equals("deletar")){
+				} else if (comando.equals("editar")) {
+					editar(req);
+				} else if (comando.equals("deletar")) {
 					deletar(req);
 				}
 			}
-			if(!comando.equals("addUser")){
+			if (!comando.equals("addUser") && !comando.equals("editUser")) {
 				listar(req);
-				forward(req, resp, "/index2.jsp");
+				forward(req, resp, "./ko-admin/user.jsp");
 			}
 		} catch (Throwable e) {
-			//Retorna o 404
+			// Retorna o 404
 			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
 			e.printStackTrace();
 		}
 
 	}
 
-	private void listar(HttpServletRequest req) {
-		List<Usuario> listaUsuario = UsuarioDAO.getInstance().findAll();
-		System.out.println("Tamanho "+listaUsuario.size());
-		req.setAttribute("listaUsuarios", listaUsuario);
-	}
-
 	protected void salvar(HttpServletRequest request) throws Exception {
 		Usuario user = new Usuario();
-		user.setLogin(request.getParameter("login"));
-		user.setSenha(request.getParameter("senha"));
+		preencheAtributosUsuario(user, request);
 		userDAO.create(user);
-		System.out.println("Salvar Teste1");
+	}
+
+	protected void editar(HttpServletRequest request) throws Exception {
+		String id = request.getParameter("id-usuario");
+		long idLong = Long.parseLong(id);
+		Usuario user = UsuarioDAO.getInstance().findOne(idLong);
+		preencheAtributosUsuario(user, request);
+		userDAO.update(user);
 	}
 
 	protected void deletar(HttpServletRequest request) throws Exception {
-		String id = request.getParameter("id");
+		String id = request.getParameter("id-usuario");
 		userDAO.deleteById(Long.valueOf(id));
-		System.out.println("Deletar Teste1");
+	}
+
+	private void listar(HttpServletRequest req) {
+		List<Usuario> listaUsuario = UsuarioDAO.getInstance().findAll();
+		req.setAttribute("listaUsuarios", listaUsuario);
+	}
+
+	private void prepararEditar(HttpServletRequest request) throws Exception {
+		String id = request.getParameter("id-usuario");
+		long idLong = Long.parseLong(id);
+		Usuario user = UsuarioDAO.getInstance().findOne(idLong);
+		request.setAttribute("userEdit", user);
+	}
+
+	private void preencheAtributosUsuario(Usuario user, HttpServletRequest request) throws Exception {
+		user.setLogin(request.getParameter("login-usuario"));
+		user.setEmail(request.getParameter("email-usuario"));
+		user.setNome(request.getParameter("nome-usuario"));
+		user.setSobreNome(request.getParameter("sobrenome-usuario"));
+		user.setSenha(request.getParameter("senha-usuario"));
 	}
 
 }

@@ -23,71 +23,70 @@ import javax.servlet.http.HttpSession;
 import dao.UsuarioDAO;
 
 @WebServlet(value = "/login-admin.ko")
-public class LoginAdminServlet extends HttpServlet  {
+public class LoginAdminServlet extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {
 		try {
 			criarDB();
-		} catch(Exception e) {
-			//System.err.println(e.getMessage());
+		} catch (Exception e) {
+			// System.err.println(e.getMessage());
 		}
 	}
-	
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {		
-		try {
-			System.out.println("Entrou no AdminServlet");
-			String comando = req.getParameter("comando");
 
-			if (comando == null) {
-				forward(req, resp, "./admin.jsp");
-			} else if (comando.equals("Entrar")) {
-				HttpSession session = req.getSession();
-				String login = req.getParameter("login");
-				String senha = req.getParameter("senha");
-				Boolean validaSenha = UsuarioDAO.validaUsuario(login, senha);
-				System.out.println("Login e senha "+login+" "+senha);
-				if(!login.isEmpty() && !senha.isEmpty() && validaSenha){
-					System.out.println("AdminServlet entrou aqui1");
-					session.setAttribute("login", login);
-					session.setAttribute("senha", senha);
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		try {
+			String comando = req.getParameter("comando") == null ? ""
+					: (String) req.getParameter("comando");
+
+			if (!comando.isEmpty() && comando.equals("Entrar")) {
+				Boolean validaSenha = ServletUtil.validaLogin(req, resp);
+				if (validaSenha) {
+					HttpSession session = req.getSession();
+					session.setAttribute("login",
+							(String) req.getParameter("login"));
+					session.setAttribute("senha",
+							(String) req.getParameter("senha"));
 					forward(req, resp, "/ko-admin/admin-panel.jsp");
 				} else {
-					if(!validaSenha){
-						req.setAttribute("MsgErro", "Usu·rio e/ou Senha inv·lidos.");
+					if (!validaSenha) {
+						req.setAttribute("MsgErro",
+								"Usu√°rio e/ou Senha inv√°lidos.");
 					}
-					System.out.println("AdminServlet redireionou para Admin.jsp");
 					forward(req, resp, "./admin.jsp");
-					//resp.sendRedirect("./admin.jsp");
 				}
-			}else if (comando.equals("erro404")){
-				req.getRequestDispatcher("./ko-admin/admin-pan123el.jsp").forward(req, resp);
+			} else {
+				forward(req, resp, "./admin.jsp");
 			}
 		} catch (Throwable e) {
-			//Retorna o 404
+			// Retorna o 404
 			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
 			e.printStackTrace();
 		}
 
 	}
-	
+
 	private void criarDB() throws SQLException {
 		try {
-			String sql = ""
-					+ "create table usuario ("
+			String sql = "" + "create table usuario ("
 					+ "  id numeric(18,0) not null,"
 					+ "  login varchar(20) not null,"
 					+ "  senha varchar(20) not null,"
-					+ "  constraint pk_conta primary key (id) "
-					+ ")";
+					+ "  nome varchar(40) not null,"
+					+ "  sobrenome varchar(40) not null,"
+					+ "  email varchar(40) not null,"
+					+ "  constraint pk_conta primary key (id) " + ")";
+			String sql2 = "insert into usuario (id, login, senha, nome, sobrenome, email) values (0,'admin','koiwin','Admin', 'Admin','admin@komail.com')";
 			String url = "jdbc:derby:db;create=true";
 			Connection conexao;
 			conexao = DriverManager.getConnection(url);
 			Statement stmt = conexao.createStatement();
 			stmt.execute(sql);
+			stmt.execute(sql2);
 			stmt.close();
-		} catch(Exception e) {
-			System.err.println("criarDB: "+e.getMessage());
+		} catch (Exception e) {
+			System.err.println("criarDB: " + e.getMessage());
 		}
 	}
 
