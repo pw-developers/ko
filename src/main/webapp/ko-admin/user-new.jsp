@@ -7,12 +7,12 @@
 	<div class="container-fluid main-container-admin">
 		<div class="col-md-2 sidebar">
 			<jsp:include page="/ko-admin/assets/includes/sidebar.html"></jsp:include>
-		</div>1
+		</div>
 		<div class="col-md-6 content">
 			<div class="row">
 				<p class="title-add-new-user">Adicionar Novo Usuário</p>
 			</div>
-			<form action="/ko/UserServlet.ko?comando=salvar">
+			<form onsubmit="return checkForm(this);" action="/ko/UserServlet.ko?comando=salvar">
 				<div class="container-fluid main-container-admin">
 					<div class="formulario_add_new_user">
 						<div>
@@ -29,16 +29,16 @@
 									name="email-usuario" size="40" class="input-admin">
 							</div>
 							<div class="your-name-user form-margin">
-								<label>Nome de Usuário</label><input type="text"
-									name="login-usuario" size="40" class="input-admin">
+								<label>Nome de Usuário*</label><input type="text"
+									name="login" size="40" class="input-admin">
 							</div>
 							<div class="your-password form-margin">
-								<label>Senha</label><input type="text"
-									name="senha-usuario" size="40" class="input-admin">
+								<label>Senha</label><input type="password"
+									name="senha" size="40" class="input-admin">
 							</div>
 							<div class="your-password-again form-margin">
-								<label>Repetir Senha</label><input type="text"
-									name="repetir-senha-usuario" size="40" class="input-admin">
+								<label>Repetir Senha</label><input type="password"
+									name="rptsenha" size="40" class="input-admin">
 							</div>
 							<div>
 								<input type="submit" name="comando"
@@ -67,6 +67,6 @@
 <script src="http://localhost:9090/ko/assets/js/waypoints.min.js"></script>
 <script src="http://localhost:9090/ko/assets/js/jquery.cbpQTRotator.js"></script>
 <script src="http://localhost:9090/ko/assets/js/custom.js"></script>
-<script src="http://localhost:9090/ko/assets/js/custom.js"></script>
+<script src="http://localhost:9090/ko/assets/js/validate.form.js"></script>
 </body>
 </html>
