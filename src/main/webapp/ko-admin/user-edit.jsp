@@ -69,12 +69,9 @@
 	src="http://localhost:9090/ko/assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="http://localhost:9090/ko/assets/js/imagesloaded.pkgd.js"></script>
 <script src="http://localhost:9090/ko/assets/js/jquery.sticky.js"></script>
-<script src="http://localhost:9090/ko/assets/js/smoothscroll.js"></script>
 <script src="http://localhost:9090/ko/assets/js/wow.min.js"></script>
-<script src="http://localhost:9090/ko/assets/js/jquery.easypiechart.js"></script>
 <script src="http://localhost:9090/ko/assets/js/waypoints.min.js"></script>
 <script src="http://localhost:9090/ko/assets/js/jquery.cbpQTRotator.js"></script>
-<script src="http://localhost:9090/ko/assets/js/custom.js"></script>
 <script src="http://localhost:9090/ko/assets/js/custom.js"></script>
 </body>
 </html>
