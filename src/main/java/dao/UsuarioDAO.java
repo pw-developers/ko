@@ -24,16 +24,12 @@ public class UsuarioDAO extends AbstractJpaDAO<Usuario> {
 	}
 	
 	public static boolean validaUsuario(String login, String senha){
-		System.out.println("UsuarioDAO validaUsuario");
 		List userList = (List) findOne(login, senha);
-		System.out.println("UsuarioDAO validaUsuario procurou todos "+login+" "+senha);
-		System.out.println("UsuarioDAO validaUsuario procurou todos "+userList);
 		
 		//Se nao for NULL ou 0, retornara apenas um registro
 		if(userList != null && userList.size() > 0 
 				&& ((Usuario) userList.get(0)).getLogin().equals(login) 
 				&& ((Usuario) userList.get(0)).getSenha().equals(senha)){
-			System.out.println("UsuarioDAO return true");
 			return true;
 		}else{
 			return false;

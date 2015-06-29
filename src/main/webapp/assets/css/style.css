@@ -7,11 +7,6 @@
  * Copyright 2015 Script Eden
  * Licensed under MIT
 */
-html.js.csstransitions {
-	height: 100%;
-	overflow: hidden;
-}
-
 body {
 	font: 300 14px/1.8 'Raleway', sans-serif;
 	color: #666;
@@ -1392,9 +1387,4 @@ span.glyphicon-circle-arrow-left {
 }
 .error-content{
 	color: #fff;
-}
-
-#page-adm, #user-edit, #users, #admin-panel{
-	height: 100%;
-	
 }

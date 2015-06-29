@@ -10,7 +10,7 @@
 		</div>
 		
 		<div class="col-md-10 content">
-			<div class="panel panel-default">
+			<div class="panel panel-default buffer-line">
 				<div class="panel-heading">Dashboard</div>
 				<div class="panel-body">Lorem ipsum dolor sit amet, }
 					consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -27,16 +27,16 @@
 <jsp:include page="/ko-admin/assets/includes/footer.html"></jsp:include>
 
 <!-- Scripts -->
-<script src="http://localhost:9090/ko/assets/js/jquery-1.11.1.min.js"></script>
-<script
-	src="http://localhost:9090/ko/assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="http://localhost:9090/ko/assets/js/imagesloaded.pkgd.js"></script>
-<script src="http://localhost:9090/ko/assets/js/jquery.sticky.js"></script>
-<script src="http://localhost:9090/ko/assets/js/wow.min.js"></script>
-<script src="http://localhost:9090/ko/assets/js/jquery.easypiechart.js"></script>
-<script src="http://localhost:9090/ko/assets/js/waypoints.min.js"></script>
-<script src="http://localhost:9090/ko/assets/js/jquery.cbpQTRotator.js"></script>
-<script src="http://localhost:9090/ko/assets/js/custom.js"></script>
-<script src="http://localhost:9090/ko/assets/js/custom.js"></script>
+<script src="/ko/assets/js/jquery-1.11.1.min.js"></script>
+<script	src="/ko/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/ko/assets/js/imagesloaded.pkgd.js"></script>
+<script src="/ko/assets/js/jquery.sticky.js"></script>
+<script src="/ko/assets/js/wow.min.js"></script>
+<script src="/ko/assets/js/jquery.easypiechart.js"></script>
+<script src="/ko/assets/js/waypoints.min.js"></script>
+<script src="/ko/assets/js/jquery.cbpQTRotator.js"></script>
+<script src="/ko/assets/js/custom.js"></script>
+<script src="/ko/assets/js/validate.form.js"></script>
+
 </body>
 </html>

@@ -2,6 +2,10 @@ h1.page-header {
     margin-top: -5px;
 }
 
+.pfblock-admin {
+	padding-bottom: 30px;
+}
+
 .main-container-admin{
 	background: #f5f5f5;
 }
@@ -33,6 +37,19 @@ h1.page-header {
 
 .side-menu .navbar {
 	border: none;
+}
+
+.btn-lg-light:hover{
+	background-color: #619de5;
+	color: #fff;
+}
+
+.btn-lg-light {
+	padding: 10px 25px;
+	font-size: 13px;
+	background: rgba(17, 17, 17, 0.8);
+	color: #fff;
+	font-weight: 600;
 }
 
 .side-menu .navbar-nav>li>a:focus, .side-menu .navbar-nav>li>a:hover {
@@ -178,12 +195,8 @@ h1.page-header {
 /*****************
     Add New User 
 ******************/
-#user-new {
-	padding-bottom: 30px;
-	background: #f5f5f5;
-}
 
-#user-new .title-add-new-user {
+#page-adm .title-pages-admin {
 	font-size: 25px;
 	font-weight: 700;
 	margin: 5px 45px;
@@ -191,25 +204,76 @@ h1.page-header {
 }
 
 .formulario_add_new_user label {
-	width: 130px;
+	  width: 30%;
 	text-align: right;
 	margin-right: 10px;
 }
 
 .formulario_add_new_user .input-admin {
-	width: 75%;
+	width: 65%;
 	border: 1px solid #cccccc;
 	border-radius: 2px;
+	padding: 0 5px;
 }
 
-.formulario_add_new_user .form-margin{
+.formulario_add_new_user .form-margin {
 	margin: 15px 0px;
 }
 
-#user-new .btn-lg.btn-block {
+#page-adm .btn-lg.btn-block.btn-admin {
 	width: 45%;
 	float: right;
-	margin-right: 10px;
+	margin-right: 30px;
+}
+
+#page-adm .btn-lg-light.btn-block.left {
+	width: 15%;
+	float: left;
+	margin-right: 30px
+}
+
+#page-adm .btn-lg.btn-block.left {
+	width: 15%;
+	float: left;
+	margin-right: 30px
+}
+
+#page-adm .buffer-line{
+	margin: 10px 0px;
+}
+
+/*****************
+       Users 
+******************/
+#page-adm .table-users table {
+	border: 5px solid;
+	background-color: #fff;
+}
+
+.title-column {
+	padding: 5px 10px;
+	background-color: #888888;
+	color: #fff;
+	text-align: center;
+}
+
+.tupla-element {
+	padding: 0 5px;
+	text-align: center;
+	font-weight: 400;
+}
+
+.table-button {
+	padding: 0px 10px;
+	font-weight: 600;
+}
+
+.table-button.button-delet a:hover{
+	color: #e55e5e;
+}
+
+#page-adm .table-button.button-edit a:hover{
+	color: #619de5;
 }
 
 /* small screen */

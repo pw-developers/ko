@@ -32,27 +32,37 @@ import admin.Usuario;
  *
  */
 @WebServlet(value = "/AdminServlet.ko")
-public class AdminServlet extends HttpServlet  {
+public class AdminServlet extends HttpServlet {
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
 		try {
 			// Valida login
 			if (!validaLogin(req, resp)) {
 				resp.sendRedirect("/ko/login-admin.ko");
 			} else {
-				String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
+				String comando = req.getParameter("comando") == null ? ""
+						: (String) req.getParameter("comando");
 
-				if (!comando.isEmpty() && comando.equals("painel-usuario")) {
-					req.setAttribute("comando", "painel-usuario");
-					forward(req, resp, "/UserServlet.ko");
-				} else {
-					// forward(req, resp, "/ko-admin/admin-panel.jsp");
-					resp.sendRedirect("/ko-admin/admin-panel.jsp");
+				if (!comando.isEmpty()) {
+					switch (comando) {
+					
+					case "painel":
+						req.setAttribute("comando", "painel");
+						forward(req, resp, "/UserServlet.ko");
+						break;
+					
+					case "usuarios":
+						req.setAttribute("comando", "painel-usuario");
+						forward(req, resp, "/UserServlet.ko");
+						break;
+
+					}
 				}
 			}
 		} catch (Throwable e) {
-			//Retorna o 404
+			// Retorna o 404
 			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
 			e.printStackTrace();
 		}

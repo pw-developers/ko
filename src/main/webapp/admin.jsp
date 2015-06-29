@@ -46,7 +46,7 @@ ${campoX}
 									</label>
 								</div>
 								<input name="comando" class="btn btn-lg btn-success btn-block" type="submit"
-									value="Entrar">
+									value="entrar">
 							</fieldset>
 						</form>
 					</div>

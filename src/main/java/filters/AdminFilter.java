@@ -22,16 +22,13 @@ public class AdminFilter implements Filter {
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		System.out.println("Entrou no AdminFilter");
 		HttpServletRequest req = (HttpServletRequest) request;
 		String uri = req.getRequestURI();
 		HttpServletResponse resp = (HttpServletResponse) response;
 
 		if (ServletUtil.validaLogin(req, resp)) {
-			System.out.println("AdminFilter continuou para servlet ");
 			chain.doFilter(req, resp);
 		} else {
-			System.out.println("AdminFilter redirecionou para admin.jsp");
 			resp.sendRedirect("/ko/admin.jsp");
 		}
 	}

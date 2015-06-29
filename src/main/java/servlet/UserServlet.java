@@ -22,8 +22,8 @@ import admin.Usuario;
 import dao.UsuarioDAO;
 
 /**
- * Servlet para gerenciar o CRUD da entidade Usuario
- * Todas funcoes relacionadas a Usuario sao gerenciadas aqui
+ * Servlet para gerenciar o CRUD da entidade Usuario Todas funcoes relacionadas
+ * a Usuario sao gerenciadas aqui
  */
 @WebServlet(value = "/UserServlet.ko")
 public class UserServlet extends HttpServlet {
@@ -35,29 +35,53 @@ public class UserServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		String comando = req.getParameter("comando") == null ? ""
+				: (String) req.getParameter("comando");
 
 		try {
 			// Valida login
-			{
-				if (!comando.isEmpty()) {
-					if (comando.equals("addUser")) {
-						forward(req, resp, "./ko-admin/user-new.jsp");
-					} else if (comando.equals("editUser")) {
-						prepararEditar(req);
-						forward(req, resp, "./ko-admin/user-edit.jsp");
-					} else if (comando.equals("salvar")) {
-						salvar(req);
-					} else if (comando.equals("editar")) {
-						editar(req);
-					} else if (comando.equals("deletar")) {
-						deletar(req);
-					}
-				}
-				if (!comando.equals("addUser") && !comando.equals("editUser")) {
+
+			if (!comando.isEmpty()) {
+
+				switch (comando) {
+
+				case "painel":
+					forward(req, resp, "./ko-admin/admin-panel.jsp");
+					break;
+
+				case "usuarios":
 					listar(req);
 					forward(req, resp, "./ko-admin/user.jsp");
+					break;
+
+				case "addUser":
+					forward(req, resp, "./ko-admin/user-new.jsp");
+					break;
+
+				case "editUser":
+					prepararEditar(req);
+					forward(req, resp, "./ko-admin/user-edit.jsp");
+					break;
+
+				case "salvar":
+					salvar(req);
+					req.setAttribute("comando", "usuarios");
+					forward(req, resp, "/AdminServlet.ko");
+					break;
+
+				case "editar":
+					editar(req);
+					req.setAttribute("comando", "usuarios");
+					forward(req, resp, "/AdminServlet.ko");
+					break;
+
+				case "deletar":
+					deletar(req);
+					req.setAttribute("comando", "usuarios");
+					forward(req, resp, "/AdminServlet.ko");
+					break;
 				}
 			}
 		} catch (Throwable e) {
@@ -65,7 +89,6 @@ public class UserServlet extends HttpServlet {
 			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
 			e.printStackTrace();
 		}
-
 	}
 
 	protected void salvar(HttpServletRequest request) throws Exception {
@@ -99,7 +122,8 @@ public class UserServlet extends HttpServlet {
 		request.setAttribute("userEdit", user);
 	}
 
-	private void preencheAtributosUsuario(Usuario user, HttpServletRequest request) throws Exception {
+	private void preencheAtributosUsuario(Usuario user,
+			HttpServletRequest request) throws Exception {
 		user.setLogin(request.getParameter("login"));
 		user.setEmail(request.getParameter("email-usuario"));
 		user.setNome(request.getParameter("nome-usuario"));
