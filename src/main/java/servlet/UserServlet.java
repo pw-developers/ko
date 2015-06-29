@@ -82,10 +82,6 @@ public class UserServlet extends HttpServlet {
 					req.setAttribute("comando", "usuarios");
 					resp.sendRedirect("/ko/AdminServlet.ko?comando=usuarios");
 					break;
-				
-					default:
-						forward(req, resp, "./ko-admin/user.jsp");
-						break;
 				}
 			}
 		} catch (Throwable e) {
