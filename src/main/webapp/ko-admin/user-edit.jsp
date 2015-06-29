@@ -51,7 +51,7 @@
 							</div>
 							<div>
 								<input type="submit" name="comando" value="editar"
-									class="btn btn-lg btn-block btn-admin">
+									class="btn btn-lg-light btn-block btn-success right btn-admin medium">
 							</div>
 						</div>
 					</div>

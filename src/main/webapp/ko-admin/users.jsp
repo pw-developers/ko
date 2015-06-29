@@ -17,7 +17,7 @@
 			<div class="row buffer-line">
 				<div class="container-fluid buffer-line">
 					<a href="/ko/UserServlet.ko?comando=addUser"
-						class="btn btn-lg-light btn-block left">Adicionar Novo</a>
+						class="btn btn-lg-light btn-block left medium">Adicionar Novo</a>
 				</div>
 			</div>
 			<div class="row">
@@ -30,6 +30,7 @@
 							<th class="title-column">E-mail</th>
 							<th class="title-column">Login</th>
 							<th class="title-column">Senha</th>
+							<th class="title-column" colspan="2">Opções</th>
 						</tr>
 						<c:forEach var="p" items="${listaUsuarios}">
 							<tr>
@@ -39,11 +40,14 @@
 								<td class="tupla-element">${p.email}</td>
 								<td class="tupla-element">${p.login}</td>
 								<td class="tupla-element">${p.senha}</td>
+								<td class="table-button button-edit"><a
+									href="/ko/UserServlet.ko?comando=editUser&id-usuario=${p.id}" title="Editar"><span
+									class="glyphicon glyphicon-pencil"></span></a></td>
 								<td class="table-button button-delet"><a
 									href="/ko/UserServlet.ko?comando=deletar&id-usuario=${p.id}"
-									onclick="return confirm('Você tem certeza?')">Deletar</a></td>
-								<td class="table-button button-edit"><a
-									href="/ko/UserServlet.ko?comando=editUser&id-usuario=${p.id}">Editar</a></td>
+									onclick="return confirm('Você tem certeza?')" title="Deletar"><span
+									class="glyphicon glyphicon-remove"></span></a></td>
+
 							</tr>
 						</c:forEach>
 					</table>

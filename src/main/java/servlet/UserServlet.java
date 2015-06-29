@@ -53,7 +53,7 @@ public class UserServlet extends HttpServlet {
 
 				case "usuarios":
 					listar(req);
-					forward(req, resp, "./ko-admin/user.jsp");
+					forward(req, resp, "./ko-admin/users.jsp");
 					break;
 
 				case "addUser":

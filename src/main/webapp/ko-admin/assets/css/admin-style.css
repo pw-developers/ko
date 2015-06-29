@@ -230,9 +230,23 @@ h1.page-header {
 	margin-right: 30px;
 }
 
+#page-adm .small,
+#page-adm input.small{
+	width: 15% !important;
+}
+
+#page-adm a.medium,
+#page-adm input.medium{
+	width: 20% !important;
+}
+
 #page-adm .btn-lg-light.btn-block.left {
-	width: 15%;
 	float: left;
+	margin-right: 30px
+}
+
+#page-adm .btn-lg-light.btn-block.right {
+	float: right;
 	margin-right: 30px
 }
 

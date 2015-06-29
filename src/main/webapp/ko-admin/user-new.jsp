@@ -25,8 +25,8 @@
 									name="sobrenome-usuario" size="40" class="input-admin">
 							</div>
 							<div class="your-email form-margin">
-								<label>Email</label><input type="text"
-									name="email-usuario" size="40" class="input-admin">
+								<label>Email<span class="text-danger"> (Obrigatório)</span></label><input type="text"
+									name="email" size="40" class="input-admin">
 							</div>
 							<div class="your-name-user form-margin">
 								<label>Nome de Usuário<span class="text-danger"> (Obrigatório)</span></label><input type="text"
@@ -42,7 +42,7 @@
 							</div>
 							<div>
 								<input type="submit" name="comando"
-									value="salvar" class="btn btn-lg btn-block btn-admin">
+									value="salvar" class="btn btn-lg-light btn-block right btn-success btn-admin medium ">
 							</div>
 						</div>
 					</div>
