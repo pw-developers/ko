@@ -70,7 +70,6 @@ public class LoginAdminServlet extends HttpServlet {
 
 	private void criarDB() throws SQLException {
 		try {
-			System.out.println("OIIIIIIIII");
 			String sql = "" + "create table usuario (" + "  id numeric(18,0) not null," + "  login varchar(20) not null," + "  senha varchar(20) not null," + "  nome varchar(40) not null," + "  sobrenome varchar(40) not null,"
 					+ "  email varchar(40) not null," + "  constraint pk_conta primary key (id) " + ")";
 			String sql2 = "insert into usuario (id, login, senha, nome, sobrenome, email) values (0,'admin','koiwin','Admin', 'Admin','admin@komail.com')";

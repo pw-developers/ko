@@ -21,7 +21,7 @@
 					<div class="formulario_add_new_user">
 						<div>
 							<div class="your-name-user form-margin">
-								<label>Id</label><input type=text disabled="disabled" class="input-admin"
+								<label>Id</label><input type=text readonly="readonly" class="input-admin block"
 									name="id-usuario" value="${userEdit.id }">
 							</div>
 							<div class="your-first-name form-margin">
