@@ -49,7 +49,9 @@ public class LoginAdminServlet extends HttpServlet {
 			String comando = req.getParameter("comando") == null ? ""
 					: (String) req.getParameter("comando");
 			if (!comando.isEmpty() && comando.equals("entrar")) {
+				
 				Boolean validaSenha = validaLogin(req, resp);
+				
 				if (validaSenha) {
 					HttpSession session = req.getSession();
 					session.setAttribute("login",
@@ -66,7 +68,7 @@ public class LoginAdminServlet extends HttpServlet {
 				}
 			} else if (!comando.isEmpty() && comando.equals("logout")) {
 				logoutUser(req);
-				resp.sendRedirect("/ko?caminho=index");
+				resp.sendRedirect("/ko/ko?caminho=index");
 			} else {
 				forward(req, resp, "./admin.jsp");
 			}

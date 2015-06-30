@@ -16,7 +16,7 @@
 			<div class="row">
 				<p class="title-pages-admin">Editar Usuário</p>
 			</div>
-			<form action="/ko/UserServlet.ko?comando=salvar">
+			<form onsubmit="return checkForm(this);" action="/ko/UserServlet.ko?comando=salvar">
 				<div class="container-fluid main-container-admin">
 					<div class="formulario_add_new_user">
 						<div>
@@ -34,7 +34,7 @@
 									size="40" class="input-admin">
 							</div>
 							<div class="your-email form-margin">
-								<label>Email</label><input type="text" name="email-usuario"
+								<label>Email</label><input type="text" name="email"
 									value="${userEdit.email }" size="40" class="input-admin">
 							</div>
 							<div class="your-name-user form-margin">

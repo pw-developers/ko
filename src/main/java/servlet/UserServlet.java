@@ -125,7 +125,7 @@ public class UserServlet extends HttpServlet {
 	private void preencheAtributosUsuario(Usuario user,
 			HttpServletRequest request) throws Exception {
 		user.setLogin(request.getParameter("login"));
-		user.setEmail(request.getParameter("email-usuario"));
+		user.setEmail(request.getParameter("email"));
 		user.setNome(request.getParameter("nome-usuario"));
 		user.setSobreNome(request.getParameter("sobrenome-usuario"));
 		user.setSenha(request.getParameter("senha"));

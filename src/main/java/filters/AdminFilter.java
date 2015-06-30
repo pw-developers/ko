@@ -31,7 +31,7 @@ public class AdminFilter implements Filter {
 		if (ServletUtil.validaLogin(req, resp)) {
 			chain.doFilter(req, resp);
 		} else {
-			resp.sendRedirect("/ko/admin.jsp");
+			forward(req, resp, "/login-admin.ko");
 		}
 	}
 

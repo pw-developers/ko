@@ -26,7 +26,7 @@
 							</div>
 							<div class="your-email form-margin">
 								<label>Email<span class="text-danger"> (Obrigatório)</span></label><input type="text"
-									name="email-usuario" size="40" class="input-admin">
+									name="email" size="40" class="input-admin">
 							</div>
 							<div class="your-name-user form-margin">
 								<label>Nome de Usuário<span class="text-danger"> (Obrigatório)</span></label><input type="text"
@@ -65,7 +65,7 @@
 <script src="/ko/assets/js/waypoints.min.js"></script>
 <script src="/ko/assets/js/jquery.cbpQTRotator.js"></script>
 <script src="/ko/assets/js/custom.js"></script>
-<script src="/ko/assets/js/validate.form.js"></script>
+<script type="text/javascript" src="/ko/assets/js/validate.form.js" charset="utf-8"></script>
 
 </body>
 </html>
