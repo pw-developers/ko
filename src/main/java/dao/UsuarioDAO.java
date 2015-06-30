@@ -36,7 +36,7 @@ public class UsuarioDAO extends AbstractJpaDAO<Usuario> {
 		}
 	}
 	
-	private static List findOne(String login, String senha){
+	public static List findOne(String login, String senha){
 		Query query = JpaUtil.getEntityManager().createQuery("from Usuario where login = :vlogin and senha = :vsenha");
 		query.setParameter("vlogin", login);
 		query.setParameter("vsenha", senha);

@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -21,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import admin.Usuario;
 import dao.UsuarioDAO;
 
 /**
@@ -35,25 +37,31 @@ public class LoginAdminServlet extends HttpServlet {
 	public void init() throws ServletException {
 		try {
 			criarDB();
+			criaAdminUser();
 		} catch (Exception e) {
 			// System.err.println(e.getMessage());
 		}
 	}
 
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
 		try {
-			String comando = req.getParameter("comando") == null ? "" : (String) req.getParameter("comando");
+			String comando = req.getParameter("comando") == null ? ""
+					: (String) req.getParameter("comando");
 
 			if (!comando.isEmpty() && comando.equals("entrar")) {
 				Boolean validaSenha = validaLogin(req, resp);
 				if (validaSenha) {
 					HttpSession session = req.getSession();
-					session.setAttribute("login", (String) req.getParameter("login"));
-					session.setAttribute("senha", (String) req.getParameter("senha"));
+					session.setAttribute("login",
+							(String) req.getParameter("login"));
+					session.setAttribute("senha",
+							(String) req.getParameter("senha"));
 					forward(req, resp, "/ko-admin/admin-panel.jsp");
 				} else {
 					if (!validaSenha) {
-						req.setAttribute("MsgErro", "Usuário e/ou Senha inválidos.");
+						req.setAttribute("MsgErro",
+								"Usuário e/ou Senha inválidos.");
 					}
 					forward(req, resp, "./admin.jsp");
 				}
@@ -70,19 +78,45 @@ public class LoginAdminServlet extends HttpServlet {
 
 	private void criarDB() throws SQLException {
 		try {
-			String sql = "" + "create table usuario (" + "  id numeric(18,0) not null," + "  login varchar(20) not null," + "  senha varchar(20) not null," + "  nome varchar(40) not null," + "  sobrenome varchar(40) not null,"
-					+ "  email varchar(40) not null," + "  constraint pk_conta primary key (id) " + ")";
-			String sql2 = "insert into usuario (id, login, senha, nome, sobrenome, email) values (0,'admin','koiwin','Admin', 'Admin','admin@komail.com')";
+			String sql = "" + "create table usuario ("
+					+ "  id numeric(18,0) not null,"
+					+ "  login varchar(20) not null,"
+					+ "  senha varchar(20) not null,"
+					+ "  nome varchar(40) not null,"
+					+ "  sobrenome varchar(40) not null,"
+					+ "  email varchar(40) not null,"
+					+ "  constraint pk_conta primary key (id) " + ")";
 			String url = "jdbc:derby:db;create=true";
 			Connection conexao;
 			conexao = DriverManager.getConnection(url);
 			Statement stmt = conexao.createStatement();
 			stmt.execute(sql);
-			stmt.execute(sql2);
 			stmt.close();
 		} catch (Exception e) {
 			System.err.println("criarDB: " + e.getMessage());
 		}
+	}
+
+	/**
+	 * Cria usuario admin, utiliza as configuracoes Singleton para persistencia
+	 */
+	private void criaAdminUser() {
+		try {
+			Usuario user = new Usuario();
+			user.setEmail("admin@admin.com");
+			user.setLogin("admin");
+			user.setNome("Admin");
+			user.setSenha("koiwin");
+			user.setSobreNome("Admin");
+			UsuarioDAO userDAO = UsuarioDAO.getInstance();
+			List listUser = userDAO.findOne("admin", "koiwin");
+			if (listUser != null && listUser.size() == 0) {
+				userDAO.getInstance().create(user);
+			}
+		} catch (Exception e) {
+			System.err.println("criarDB: " + e.getMessage());
+		}
+
 	}
 
 }

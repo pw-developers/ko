@@ -26,7 +26,7 @@
 							</div>
 							<div class="your-email form-margin">
 								<label>Email<span class="text-danger"> (Obrigatório)</span></label><input type="text"
-									name="email" size="40" class="input-admin">
+									name="email-usuario" size="40" class="input-admin">
 							</div>
 							<div class="your-name-user form-margin">
 								<label>Nome de Usuário<span class="text-danger"> (Obrigatório)</span></label><input type="text"
