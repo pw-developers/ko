@@ -62,7 +62,7 @@ public class LoginAdminServlet extends HttpServlet {
 				} else {
 					if (!validaSenha) {
 						req.setAttribute("MsgErro",
-								"Usuário e/ou Senha inválidos.");
+								"Usuï¿½rio e/ou Senha invï¿½lidos.");
 					}
 					forward(req, resp, "./admin.jsp");
 				}
@@ -90,8 +90,8 @@ public class LoginAdminServlet extends HttpServlet {
 					+ "  id numeric(18,0) not null,"
 					+ "  login varchar(20) not null,"
 					+ "  senha varchar(20) not null,"
-					+ "  nome varchar(40) not null,"
-					+ "  sobrenome varchar(40) not null,"
+					+ "  nome varchar(40),"
+					+ "  sobrenome varchar(40),"
 					+ "  email varchar(40) not null,"
 					+ "  constraint pk_conta primary key (id) " + ")";
 			String url = "jdbc:derby:db;create=true";

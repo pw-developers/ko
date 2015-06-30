@@ -67,19 +67,16 @@ public class UserServlet extends HttpServlet {
 
 				case "salvar":
 					salvar(req);
-					req.setAttribute("comando", "usuarios");
 					resp.sendRedirect("/ko/AdminServlet.ko?comando=usuarios");
 					break;
 
 				case "editar":
 					editar(req);
-					req.setAttribute("comando", "usuarios");
 					resp.sendRedirect("/ko/AdminServlet.ko?comando=usuarios");
 					break;
 
 				case "deletar":
 					deletar(req);
-					req.setAttribute("comando", "usuarios");
 					resp.sendRedirect("/ko/AdminServlet.ko?comando=usuarios");
 					break;
 				}
