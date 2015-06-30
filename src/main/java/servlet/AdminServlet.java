@@ -57,6 +57,11 @@ public class AdminServlet extends HttpServlet {
 						req.setAttribute("comando", "painel-usuario");
 						forward(req, resp, "/UserServlet.ko");
 						break;
+						
+					case "logout":
+						req.setAttribute("comando", "painel");
+						forward(req, resp, "/login-admin.ko");
+						break;
 
 					}
 				}

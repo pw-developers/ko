@@ -48,7 +48,6 @@ public class LoginAdminServlet extends HttpServlet {
 		try {
 			String comando = req.getParameter("comando") == null ? ""
 					: (String) req.getParameter("comando");
-
 			if (!comando.isEmpty() && comando.equals("entrar")) {
 				Boolean validaSenha = validaLogin(req, resp);
 				if (validaSenha) {
@@ -65,6 +64,9 @@ public class LoginAdminServlet extends HttpServlet {
 					}
 					forward(req, resp, "./admin.jsp");
 				}
+			} else if (!comando.isEmpty() && comando.equals("logout")) {
+				logoutUser(req);
+				resp.sendRedirect("/ko?caminho=index");
 			} else {
 				forward(req, resp, "./admin.jsp");
 			}
@@ -76,6 +78,10 @@ public class LoginAdminServlet extends HttpServlet {
 
 	}
 
+	private void logoutUser(HttpServletRequest req){
+		req.getSession().invalidate();
+	}
+	
 	private void criarDB() throws SQLException {
 		try {
 			String sql = "" + "create table usuario ("

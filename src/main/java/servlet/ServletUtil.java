@@ -38,7 +38,11 @@ public abstract class ServletUtil {
 			login = (String) req.getParameter("login");
 			senha = (String) req.getParameter("senha");
 		}
+		Boolean loginValidated = UsuarioDAO.validaUsuario(login, senha);
+		if(!loginValidated){
+			req.setAttribute("MsgErro", "Usuário e/ou Senha inválidos.");
+		}
 		
-		return UsuarioDAO.validaUsuario(login, senha);
+		return loginValidated; 
 	}
 }
